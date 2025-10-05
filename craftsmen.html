@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>For Craftsmen - Linkwerq</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600" rel="stylesheet" />
+<style>
+body {
+margin: 0;
+background: #1b79ea;
+font-family: 'Montserrat', Arial, sans-serif;
+color: #222;
+}
+header {
+background: transparent;
+padding: 16px 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex-wrap: wrap;
+flex-direction: row;
+color: #fff;
+}
+.logo {
+color: #fff;
+font-weight: 900;
+font-size: 2em;
+letter-spacing: 1.5px;
+margin-right: 20px;
+}
+.nav {
+display: flex;
+gap: 20px;
+font-size: 1em;
+align-items: center;
+}
+.nav a {
+color: #fff;
+text-decoration: none;
+font-weight: 400;
+}
+.nav a.account {
+background: #eff;
+color: #1871e6;
+border-radius: 7px;
+padding: 4px 12px;
+font-weight: 700;
+}
+.lang-switch {
+display: flex;
+gap: 10px;
+font-weight: 600;
+color: #fff;
+}
+.lang-switch a {
+color: #fff;
+text-decoration: none;
+padding: 2px 6px;
+}
+.lang-switch a.active, .lang-switch a:hover {
+font-weight: 900;
+text-decoration: underline;
+}
+.main-wrapper {
+background: #fafafa;
+max-width: 1100px;
+margin: 24px auto 0;
+border-radius: 20px;
+box-shadow: 0 2px 16px #1b79ea40;
+padding: 40px 36px 8px;
+font-family: 'Open Sans', sans-serif;
+color: #222;
+}
+h1.title-header {
+text-align: center;
+font-weight: 900;
+font-size: 2.6em;
+color: #222;
+margin: 10px 0 30px 0;
+font-family: 'Montserrat', sans-serif;
+}
+h1.title-header .highlight {
+color: #f4c542;
+}
+.section-box {
+border: 2px solid #1b79ea;
+background: #ffffffcc;
+border-radius: 16px;
+padding: 24px 28px;
+margin-bottom: 80px;
+box-shadow: 0 8px 20px rgba(27, 121, 234, 0.15);
+transition: box-shadow 0.3s ease;
+}
+.section-box:hover {
+box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
+}
+h2 {
+margin-bottom: 14px;
+font-weight: 900;
+display: flex;
+align-items: center;
+gap: 12px;
+font-size: 1.8em;
+}
+h2 svg {
+width: 28px;
+height: 28px;
+fill: #1b79ea;
+}
+p {
+font-size: 1.15em;
+line-height: 1.6em;
+margin-bottom: 16px;
+}
+.icon-circle {
+display: inline-block;
+width: 36px;
+height: 36px;
+border-radius: 50%;
+background-color: #fff;
+border: 2px solid #1b79ea;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+footer {
+background-color: #1b79ea;
+color: white;
+text-align: center;
+padding: 16px 0;
+font-family: 'Open Sans', sans-serif;
+font-size: 0.9em;
+border-radius: 0 0 20px 20px;
+margin-top: 40px;
+}
+
+/* Responsive adjustments for mobile devices */
+@media screen and (max-width: 620px) {
+    header {
+        padding: 12px 10px;
+        gap: 20px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        font-size: 1.6em;
+        margin-right: 0;
+    }
+    .nav {
+        gap: 10px;
+        font-size: 0.9em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    h1.title-header {
+        font-size: 1.8em;
+        margin-bottom: 24px;
+    }
+    .section-box {
+        padding: 20px 20px;
+        margin-bottom: 40px;
+    }
+    h2 {
+        font-size: 1.4em;
+        gap: 8px;
+    }
+    p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1.title-header {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1.2em;
+        gap: 6px;
+    }
+    .section-box {
+        border-width: 1.5px;
+        padding: 16px 16px;
+        margin-bottom: 30px;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Linkwerq</div>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="for_companies.html">For Companies</a>
+<a href="services.html">Services</a>
+<a href="partners.html">Partners</a>
+<a href="contact.html" class="account">Contact</a>
+</nav>
+<div class="lang-switch">
+<a href="index.html">Čeština</a>
+<span>|</span>
+<a href="index_en.html" class="active">English</a>
+<span>|</span>
+<a href="index_de.html">Deutsch</a>
+</div>
+</header>
+<div class="main-wrapper">
+<h1 class="title-header">For Craftsmen – find <span class="highlight">well-paid jobs</span> and long-term contracts</h1>
+
+<div class="section-box">
+<h2><span class="icon-circle" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><path d="M22 42h20v4H22zM42 20v10l10 6v-4l-6-4v-8zM12 28v-6h28v6z"/></svg>
+</span> Find well-paid jobs in Germany</h2>
+<p>As a craftsman, you have a unique opportunity to secure stable and well-paid work directly with German or verified companies. Our platform helps you find contracts and long-term projects across Germany with fair pay and secured accommodation.</p>
+<p>Work in a professional environment, develop your skills, and secure stable income abroad thanks to verified partners who support you.</p>
+<p>Contact us and start your new career today!</p>
+</div>
+
+<div class="section-box">
+<h2><span class="icon-circle" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><circle cx="32" cy="32" r="30" stroke="#0077cc" stroke-width="4" fill="none"/><line x1="32" y1="32" x2="32" y2="16" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/><line x1="32" y1="32" x2="44" y2="44" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/></svg>
+</span> Easy access to verified contracts</h2>
+<p>Forget about lengthy job searches – with Linkwerq you get instant access to verified and trustworthy companies in Germany looking for qualified craftsmen like you.</p>
+</div>
+
+<div class="section-box">
+<h2><span class="icon-circle" aria-hidden="true">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><circle cx="32" cy="32" r="12" fill="#0077cc"/><path d="M32 20v24" stroke="#fff" stroke-width="4"/><path d="M20 32h24" stroke="#fff" stroke-width="4"/></svg>
+</span> Support and consultancy</h2>
+<p>We provide assistance in communication with German companies and help with administration so you can focus on your work and its quality.</p>
+</div>
+</div>
+<footer>
+&copy; 2025 Linkwerq. All rights reserved.
+</footer>
+</body>
+</html>
