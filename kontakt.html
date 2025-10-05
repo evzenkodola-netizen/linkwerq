@@ -4,200 +4,190 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Kontakt - Linkwerq</title>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600&display=swap" rel="stylesheet" />
 <style>
 body {
-margin: 0;
-background: #1b79ea;
-font-family: 'Montserrat', Arial, sans-serif;
-color: #222;
+  margin: 0;
+  background: #1b79ea;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #222;
 }
 header {
-background: transparent;
-padding: 16px 20px;
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 40px;
-flex-wrap: wrap;
-flex-direction: row;
-color: #fff;
+  background: transparent;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  color: #fff;
 }
 .logo {
-color: #fff;
-font-weight: 900;
-font-size: 2em;
-letter-spacing: 1.5px;
-margin-right: 20px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2em;
+  letter-spacing: 1.5px;
+  margin-right: 20px;
 }
 .nav {
-display: flex;
-gap: 20px;
-font-size: 1em;
-align-items: center;
+  display: flex;
+  gap: 20px;
+  font-size: 1em;
+  align-items: center;
 }
 .nav a {
-color: #fff;
-text-decoration: none;
-font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
 }
 .nav a.account {
-background: #eff;
-color: #1871e6;
-border-radius: 7px;
-padding: 4px 12px;
-font-weight: 700;
+  background: #eff;
+  color: #1871e6;
+  border-radius: 7px;
+  padding: 4px 12px;
+  font-weight: 700;
 }
 .lang-switch {
-display: flex;
-gap: 10px;
-font-weight: 600;
-color: #fff;
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  color: #fff;
 }
 .lang-switch a {
-color: #fff;
-text-decoration: none;
-padding: 2px 6px;
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 6px;
 }
 .lang-switch a.active, .lang-switch a:hover {
-font-weight: 900;
-text-decoration: underline;
+  font-weight: 900;
+  text-decoration: underline;
 }
 .main-wrapper {
-background: #fafafa;
-max-width: 1100px;
-margin: 24px auto 0;
-border-radius: 20px;
-box-shadow: 0 2px 16px #1b79ea40;
-padding: 40px 36px 8px;
-font-family: 'Open Sans', sans-serif;
-color: #222;
+  background: #fafafa;
+  max-width: 1100px;
+  margin: 24px auto 0;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px #1b79ea40;
+  padding: 40px 36px 8px;
+  font-family: 'Open Sans', sans-serif;
+  color: #222;
 }
 h1.title-header {
-text-align: center;
-font-weight: 900;
-font-size: 2.6em;
-color: #222;
-margin: 10px 0 30px 0;
-font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.6em;
+  color: #222;
+  margin: 10px 0 30px 0;
+  font-family: 'Montserrat', sans-serif;
 }
 .section-box {
-border: 2px solid #1b79ea;
-background: #ffffffcc;
-border-radius: 16px;
-padding: 24px 28px;
-margin-bottom: 40px;
-box-shadow: 0 8px 20px rgba(27, 121, 234, 0.15);
-transition: box-shadow 0.3s ease;
+  border: 2px solid #1b79ea;
+  background: #ffffffcc;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(27, 121, 234, 0.15);
+  transition: box-shadow 0.3s ease;
 }
 .section-box:hover {
-box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
+  box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
 }
 p {
-font-size: 1.15em;
-line-height: 1.6em;
-margin-bottom: 16px;
-}
-.icon-circle {
-display: inline-block;
-width: 36px;
-height: 36px;
-border-radius: 50%;
-background-color: #fff;
-border: 2px solid #1b79ea;
-display: flex;
-align-items: center;
-justify-content: center;
+  font-size: 1.15em;
+  line-height: 1.6em;
+  margin-bottom: 16px;
 }
 footer {
-background-color: #1b79ea;
-color: white;
-text-align: center;
-padding: 16px 0;
-font-family: 'Open Sans', sans-serif;
-font-size: 0.9em;
-border-radius: 0 0 20px 20px;
-margin-top: 40px;
+  background-color: #1b79ea;
+  color: white;
+  text-align: center;
+  padding: 16px 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  border-radius: 0 0 20px 20px;
+  margin-top: 40px;
 }
-/* Responzivní úpravy pro mobilní zařízení */
+
+/* Responsive styles for mobile */
 @media screen and (max-width: 620px) {
-    header {
-        padding: 12px 10px;
-        gap: 20px;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo {
-        font-size: 1.6em;
-        margin-right: 0;
-    }
-    .nav {
-        gap: 10px;
-        font-size: 0.9em;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    h1.title-header {
-        font-size: 1.8em;
-        margin-bottom: 24px;
-    }
-    .section-box {
-        padding: 20px 20px;
-        margin-bottom: 30px;
-    }
-    p {
-        font-size: 1em;
-    }
+  header {
+    padding: 12px 10px;
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    font-size: 1.6em;
+    margin-right: 0;
+  }
+  .nav {
+    gap: 10px;
+    font-size: 0.9em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  h1.title-header {
+    font-size: 1.8em;
+    margin-bottom: 24px;
+  }
+  .section-box {
+    padding: 20px 20px;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 1em;
+  }
 }
 @media screen and (max-width: 400px) {
-    h1.title-header {
-        font-size: 1.4em;
-    }
-    .section-box {
-        border-width: 1.5px;
-        padding: 16px 16px;
-        margin-bottom: 20px;
-    }
+  h1.title-header {
+    font-size: 1.4em;
+  }
+  .section-box {
+    border-width: 1.5px;
+    padding: 16px 16px;
+    margin-bottom: 20px;
+  }
 }
 </style>
 </head>
 <body>
 <header>
-<div style="display: flex; align-items: center; gap: 10px;">
+  <div style="display: flex; align-items: center; gap: 10px;">
     <img src="images/logo.png" alt="Logo" style="width: 80px; height: auto;">
-    <div class="logo">Linkwerq</div><nav class="nav">
-<a href="index.html">Domů</a>
-<a href="pro_firmy.html">Pro firmy</a>
-<a href="remeslnici.html">Pro řemeslníky</a>
-
-<a href="spolupracujeme.html" class="account">Spolupracujeme</a>
-</nav>
-<div class="lang-switch">
-<a href="index.html">Čeština</a>
-<span>|</span>
-<a href="index_en.html">English</a>
-<span>|</span>
-<a href="index_de.html">Deutsch</a>
-</div>
+    <div class="logo">Linkwerq</div>
+    <nav class="nav">
+      <a href="index.html">Domů</a>
+      <a href="pro_firmy.html">Pro firmy</a>
+      <a href="remeslnici.html">Pro řemeslníky</a>
+      <a href="spolupracujeme.html" class="account">Spolupracujeme</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="index.html">Čeština</a>
+      <span>|</span>
+      <a href="index_en.html">English</a>
+      <span>|</span>
+      <a href="index_de.html">Deutsch</a>
+    </div>
 </header>
 <div class="main-wrapper">
-<h1 class="title-header">Kontaktujte nás</h1>
+  <h1 class="title-header">Kontaktujte nás</h1>
 
-<div class="section-box">
-<p><strong>Web:</strong> !!!!!!!!!!!</p>
-<p><strong>Email:</strong> !!!!!!!!!!!</p>
-<p><strong>Telefon:</strong> !!!!!!!!!!!</p>
-</div>
+  <div class="section-box">
+    <p><strong>Web:</strong> !!!!!!!!!!!</p>
+    <p><strong>Email:</strong> !!!!!!!!!!!</p>
+    <p><strong>Telefon:</strong> !!!!!!!!!!!</p>
+  </div>
 
-<div class="section-box">
-<h2>O vývoji platformy</h2>
-<p>Platforma Linkwerq je vyvíjena se zaměřením na propojení řemeslníků a firem v digitálním věku. Pravidelně ji vylepšujeme, aby byla co nejpřehlednější a nejefektivnější pro všechny uživatele.</p>
-<p>Naším cílem je usnadnit komunikaci, zkrátit dobu hledání práce i spolehlivých pracovních sil a nabídnout moderní řešení na míru.</p>
-</div>
+  <div class="section-box">
+    <h2>O vývoji platformy</h2>
+    <p>Platforma Linkwerq je vyvíjena se zaměřením na propojení řemeslníků a firem v digitálním věku. Pravidelně ji vylepšujeme, aby byla co nejpřehlednější a nejefektivnější pro všechny uživatele.</p>
+    <p>Naším cílem je usnadnit komunikaci, zkrátit dobu hledání práce i spolehlivých pracovních sil a nabídnout moderní řešení na míru.</p>
+  </div>
 </div>
 <footer>
-&copy; 2025 Linkwerq. Všechna práva vyhrazena.
+  &copy; 2025 Linkwerq. Všechna práva vyhrazena.
 </footer>
 </body>
 </html>

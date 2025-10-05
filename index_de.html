@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Startseite - Linkwerq</title>
-<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600" rel="stylesheet" />
+<title>Linkwerq – Qualitäts-Handwerker online</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600&display=swap" rel="stylesheet" />
 <style>
 body {
     margin: 0;
@@ -14,21 +14,26 @@ body {
 }
 header {
     background: transparent;
-    padding: 16px 20px; 
+    padding: 16px 20px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;
     flex-direction: row;
     color: #fff;
 }
+header > div.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .logo {
     color: #fff;
     font-weight: 900;
     font-size: 2em;
     letter-spacing: 1.5px;
-    margin-right: 20px;
+    margin-right: 0;
 }
 .nav {
     display: flex;
@@ -68,7 +73,6 @@ header {
     box-shadow: 0 2px 16px #1b79ea40;
     padding: 40px 36px 8px;
     font-family: 'Open Sans', sans-serif;
-    color: #222;
 }
 h1.title-header {
     text-align: center;
@@ -87,51 +91,6 @@ h1.title-header .highlight {
     background: #f4c542;
     margin: 0 auto 32px auto;
     border-radius: 10px;
-}
-.intro-strip {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto 32px auto;
-    height: 120px;
-    overflow: hidden;
-    border-radius: 16px;
-}
-.intro-strip img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-.features {
-    display: flex;
-    gap: 32px;
-    justify-content: center;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
-}
-.feature-box {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px 20px 28px;
-    flex: 1 1 220px;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
-    font-family: 'Open Sans', sans-serif;
-}
-.feature-box img {
-    height: 40px;
-    margin-bottom: 14px;
-}
-.feature-title {
-    font-weight: 600;
-    font-size: 1.3em;
-    margin-bottom: 6px;
-    color: #1b79ea;
-}
-.feature-desc {
-    font-size: 1em;
-    color: #444;
-    line-height: 1.4em;
 }
 .presentation-text {
     text-align: center;
@@ -203,69 +162,111 @@ h1.title-header .highlight {
 .contact-form button:hover {
     background: #155ab7;
 }
-
-/* Responzivní úpravy */
-@media screen and (max-width: 620px) {
-    .intro-forms {
-        flex-direction: column;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .form-box {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .nav {
-        gap: 10px;
-        font-size: 0.9em;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    header {
-        padding: 12px 10px;
-        gap: 20px;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo {
-        font-size: 1.6em;
-        margin-right: 0;
-    }
+.features {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+.feature-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 20px 28px;
+    flex: 1 1 220px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
+    font-family: 'Open Sans', sans-serif;
+}
+.feature-box img {
+    height: 40px;
+    margin-bottom: 14px;
+}
+.feature-title {
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 6px;
+    color: #1b79ea;
+}
+.feature-desc {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.4em;
 }
 
+/* Responsive adjustments */
+@media screen and (max-width: 620px) {
+    header {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 12px 10px !important;
+        gap: 20px !important;
+    }
+    header > div.logo-container {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        justify-content: center !important;
+    }
+    .logo {
+        font-size: 1.6em !important;
+        margin-right: 0 !important;
+    }
+    .nav {
+        gap: 10px !important;
+        font-size: 0.9em !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    .intro-forms {
+        flex-direction: column !important;
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        gap: 20px !important;
+    }
+    .form-box {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+}
 @media screen and (max-width: 400px) {
+    .logo {
+        font-size: 1.4em !important;
+    }
     h1.title-header {
-        font-size: 1.8em;
+        font-size: 1.8em !important;
     }
     .feature-box {
-        flex: 1 1 100%;
+        flex: 1 1 100% !important;
     }
     .features {
-        gap: 16px;
+        gap: 16px !important;
     }
 }
 </style>
 </head>
 <body>
 <header>
-<div style="display: flex; align-items: center; gap: 10px;">
-    <img src="images/logo.png" alt="Logo" style="width: 80px; height: auto;">
-    <div class="logo">Linkwerq</div><nav class="nav">
-<a href="index_de.html" class="active">Startseite</a>
-<a href="for_companies_de.html">Für Firmen</a>
-<a href="for_craftsmen_de.html">Für Handwerker</a>
-<a href="services_de.html">Dienstleistungen</a>
-<a href="partners_de.html">Partnerschaften</a>
-</nav>
-<div class="lang-switch">
-<a href="index.html">Čeština</a>
-<span>|</span>
-<a href="index_en.html">English</a>
-<span>|</span>
-<a href="index_de.html" class="active">Deutsch</a>
-</div>
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Logo" style="width: 60px; height: auto;">
+    <div class="logo">Linkwerq</div>
+  </div>
+  <nav class="nav">
+    <a href="index_de.html" class="active">Startseite</a>
+    <a href="for_companies_de.html">Für Firmen</a>
+    <a href="for_craftsmen_de.html">Für Handwerker</a>
+    <a href="services_de.html">Dienstleistungen</a>
+    <a href="partners_de.html">Partnerschaften</a>
+  </nav>
+  <div class="lang-switch">
+    <a href="index.html">Čeština</a>
+    <span>|</span>
+    <a href="index_en.html">English</a>
+    <span>|</span>
+    <a href="index_de.html" class="active">Deutsch</a>
+  </div>
 </header>
 <div class="main-wrapper">
 <h1 class="title-header"><span class="highlight">Linkwerq</span> – Qualitäts-Handwerker online</h1>
@@ -297,25 +298,25 @@ Wählen Sie das passende Formular, je nachdem, ob Sie ein Unternehmen sind, das 
 </div>
 <div class="features">
     <div class="feature-box">
-    <img src="images/toolbox.png" alt="Fachwissen" />
-    <div class="feature-title">Fachwissen</div>
-    <div class="feature-desc">Handwerker sind echte Profis, die Ihre Bedürfnisse verstehen und wertvolle Dienste leisten, die Unternehmen benötigen.</div>
-</div>
-<div class="feature-box">
-    <img src="images/globe--v1.png" alt="International" />
-    <div class="feature-title">International</div>
-    <div class="feature-desc">Wir entwickeln neue Lösungen für Handwerks- und Bauherausforderungen auch international.</div>
-</div>
-<div class="feature-box">
-    <img src="images/shield.png" alt="Zuverlässigkeit" />
-    <div class="feature-title">Zuverlässigkeit</div>
-    <div class="feature-desc">Wir möchten, dass Kunden sich auf Linkwerq verlassen können – für konsistente und vertrauenswürdige Ergebnisse, immer wieder.</div>
-</div>
-<div class="feature-box">
-    <img src="images/link.png" alt="Einfachheit" />
-    <div class="feature-title">Einfachheit</div>
-    <div class="feature-desc">Wir möchten Ihre Wege ganz einfach verbinden.</div>
-</div>
+      <img src="images/toolbox.png" alt="Fachwissen" />
+      <div class="feature-title">Fachwissen</div>
+      <div class="feature-desc">Handwerker sind echte Profis, die Ihre Bedürfnisse verstehen und wertvolle Dienste leisten, die Unternehmen benötigen.</div>
+    </div>
+    <div class="feature-box">
+      <img src="images/globe--v1.png" alt="International" />
+      <div class="feature-title">International</div>
+      <div class="feature-desc">Wir entwickeln neue Lösungen für Handwerks- und Bauherausforderungen auch international.</div>
+    </div>
+    <div class="feature-box">
+      <img src="images/shield.png" alt="Zuverlässigkeit" />
+      <div class="feature-title">Zuverlässigkeit</div>
+      <div class="feature-desc">Wir möchten, dass Kunden sich auf Linkwerq verlassen können – für konsistente und vertrauenswürdige Ergebnisse, immer wieder.</div>
+    </div>
+    <div class="feature-box">
+      <img src="images/link.png" alt="Einfachheit" />
+      <div class="feature-title">Einfachheit</div>
+      <div class="feature-desc">Wir möchten Ihre Wege ganz einfach verbinden.</div>
+    </div>
 </div>
 </div>
 <footer style="background-color: #1b79ea; color: white; text-align: center; padding: 16px 0; font-family: 'Open Sans', sans-serif; font-size: 0.9em; border-radius: 0 0 20px 20px; margin-top: 40px;">
@@ -323,4 +324,3 @@ Wählen Sie das passende Formular, je nachdem, ob Sie ein Unternehmen sind, das 
 </footer>
 </body>
 </html>
-
