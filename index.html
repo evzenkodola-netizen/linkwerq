@@ -13,11 +13,11 @@ body {
 }
 header {
     background: transparent;
-    padding: 16px 20px; /* zmenšený padding vlevo a vpravo */
+    padding: 16px 20px; 
     display: flex;
-    justify-content: center; /* zarovnat na střed */
+    justify-content: center; 
     align-items: center;
-    gap: 40px; /* mezera mezi prvky v hlavičce */
+    gap: 40px;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -75,11 +75,11 @@ h1.title-header {
     font-weight: 900;
     font-size: 2.6em;
     color: #222;
-    margin: 10px 0 8px 0; /* menší mezera nad nadpisem */
+    margin: 10px 0 8px 0;
     font-family: 'Montserrat', sans-serif;
 }
 h1.title-header .highlight {
-    color: #f4c542; /* žlutá barva */
+    color: #f4c542;
 }
 .decorative-line {
     width: 120px;
@@ -203,6 +203,49 @@ h1.title-header .highlight {
 .contact-form button:hover {
     background: #155ab7;
 }
+
+/* Responzivní úpravy pro mobilní zařízení */
+@media screen and (max-width: 620px) {
+    .intro-forms {
+        flex-direction: column;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .nav {
+        gap: 10px;
+        font-size: 0.9em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header, header {
+        padding: 12px 10px;
+        gap: 20px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        font-size: 1.6em;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1.title-header {
+        font-size: 1.8em;
+    }
+    .feature-box {
+        flex: 1 1 100%;
+    }
+    .features {
+        gap: 16px;
+    }
+}
 </style>
 </head>
 <body>
@@ -230,10 +273,6 @@ h1.title-header .highlight {
 <div class="presentation-text">
   Vyberte odpovídající formulář podle toho, zda jste firma hledající řemeslníka, nebo řemeslník hledající práci. Vyplňte požadované údaje a my vám pomůžeme najít vhodné partnery.
 </div>
-
-<!-- Místo pro obrázek, zmenšené mezery -->
-<!-- Přibližně menší mezera nad nadpisem -->
-<!-- Původní blok s obrázkem je odstraněn, mezera zůstává přes margin -->
 
 <div class="intro-forms">
   <div class="form-box">
@@ -276,7 +315,6 @@ h1.title-header .highlight {
     <div class="feature-title">Jednoduchost</div>
     <div class="feature-desc">Jednoduše chceme spojit vaše cesty.</div>
 </div>
-
 </div>
 </div>
 <footer style="background-color: #1b79ea; color: white; text-align: center; padding: 16px 0; font-family: 'Open Sans', sans-serif; font-size: 0.9em; border-radius: 0 0 20px 20px; margin-top: 40px;">
@@ -284,4 +322,5 @@ h1.title-header .highlight {
 </footer>
 </body>
 </html>
+
 ```
