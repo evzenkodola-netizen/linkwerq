@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Startseite - Linkwerq</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600" rel="stylesheet" />
+<style>
+body {
+    margin: 0;
+    background: #1b79ea;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #222;
+}
+header {
+    background: transparent;
+    padding: 16px 20px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: #fff;
+}
+.logo {
+    color: #fff;
+    font-weight: 900;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    margin-right: 20px;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+    font-size: 1em;
+    align-items: center;
+}
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+.nav a.active {
+    font-weight: 700;
+    text-decoration: underline;
+}
+.lang-switch {
+    display: flex;
+    gap: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+.lang-switch a {
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 6px;
+}
+.lang-switch a.active, .lang-switch a:hover {
+    font-weight: 900;
+    text-decoration: underline;
+}
+.main-wrapper {
+    background: #fafafa;
+    max-width: 1100px;
+    margin: 24px auto 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px #1b79ea40;
+    padding: 40px 36px 8px;
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+}
+h1.title-header {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.6em;
+    color: #222;
+    margin: 10px 0 8px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+h1.title-header .highlight {
+    color: #f4c542;
+}
+.decorative-line {
+    width: 120px;
+    height: 3px;
+    background: #f4c542;
+    margin: 0 auto 32px auto;
+    border-radius: 10px;
+}
+.intro-strip {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 32px auto;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.intro-strip img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.features {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+.feature-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 20px 28px;
+    flex: 1 1 220px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
+    font-family: 'Open Sans', sans-serif;
+}
+.feature-box img {
+    height: 40px;
+    margin-bottom: 14px;
+}
+.feature-title {
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 6px;
+    color: #1b79ea;
+}
+.feature-desc {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.4em;
+}
+.presentation-text {
+    text-align: center;
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #007ba7;
+}
+.intro-forms {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+.form-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 24px 28px;
+    width: 45%;
+    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+.form-box:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+.form-box h3 {
+    margin-top: 0;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1871e6;
+    font-size: 1.4em;
+}
+.contact-form input,
+.contact-form textarea {
+    border: 1.5px solid #aad2fa;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 1em;
+    background: #fff;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    transition: border-color 0.2s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #1b79ea;
+    box-shadow: 0 0 8px #1b79ea77;
+}
+.contact-form button {
+    background: #1b79ea;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.15em;
+    transition: background 0.3s ease;
+}
+.contact-form button:hover {
+    background: #155ab7;
+}
+
+/* Responzivní úpravy */
+@media screen and (max-width: 620px) {
+    .intro-forms {
+        flex-direction: column;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .nav {
+        gap: 10px;
+        font-size: 0.9em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    header {
+        padding: 12px 10px;
+        gap: 20px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        font-size: 1.6em;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1.title-header {
+        font-size: 1.8em;
+    }
+    .feature-box {
+        flex: 1 1 100%;
+    }
+    .features {
+        gap: 16px;
+    }
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Linkwerq</div>
+<nav class="nav">
+<a href="index_de.html" class="active">Startseite</a>
+<a href="for_companies_de.html">Für Firmen</a>
+<a href="for_craftsmen_de.html">Für Handwerker</a>
+<a href="services_de.html">Dienstleistungen</a>
+<a href="partners_de.html">Partnerschaften</a>
+</nav>
+<div class="lang-switch">
+<a href="index.html">Čeština</a>
+<span>|</span>
+<a href="index_en.html">English</a>
+<span>|</span>
+<a href="index_de.html" class="active">Deutsch</a>
+</div>
+</header>
+<div class="main-wrapper">
+<h1 class="title-header"><span class="highlight">Linkwerq</span> – Qualitäts-Handwerker online</h1>
+<div class="decorative-line"></div>
+
+<div class="presentation-text">
+Wählen Sie das passende Formular, je nachdem, ob Sie ein Unternehmen sind, das Handwerker sucht, oder ein Handwerker, der Arbeit sucht. Füllen Sie die erforderlichen Daten aus, und wir helfen Ihnen, passende Partner zu finden.
+</div>
+
+<div class="intro-forms">
+  <div class="form-box">
+    <h3>Unternehmen sucht Handwerker</h3>
+    <form action="https://formspree.io/f/evzen.kodola@email.cz" method="POST" class="contact-form">
+      <input type="text" name="company_name" placeholder="Firmenname" required />
+      <textarea name="job_description" placeholder="Auftragsbeschreibung" required></textarea>
+      <input type="email" name="_replyto" placeholder="Kontakt-E-Mail" required />
+      <button type="submit">Absenden</button>
+    </form>
+  </div>
+  <div class="form-box">
+    <h3>Handwerker sucht Unternehmen</h3>
+    <form action="https://formspree.io/f/evzen.kodola@email.cz" method="POST" class="contact-form">
+      <input type="text" name="artisan_name" placeholder="Name" required />
+      <input type="text" name="specialization" placeholder="Spezialisierung" required />
+      <input type="email" name="_replyto" placeholder="Kontakt-E-Mail" required />
+      <button type="submit">Absenden</button>
+    </form>
+  </div>
+</div>
+<div class="features">
+    <div class="feature-box">
+    <img src="images/toolbox.png" alt="Fachwissen" />
+    <div class="feature-title">Fachwissen</div>
+    <div class="feature-desc">Handwerker sind echte Profis, die Ihre Bedürfnisse verstehen und wertvolle Dienste leisten, die Unternehmen benötigen.</div>
+</div>
+<div class="feature-box">
+    <img src="images/globe--v1.png" alt="International" />
+    <div class="feature-title">International</div>
+    <div class="feature-desc">Wir entwickeln neue Lösungen für Handwerks- und Bauherausforderungen auch international.</div>
+</div>
+<div class="feature-box">
+    <img src="images/shield.png" alt="Zuverlässigkeit" />
+    <div class="feature-title">Zuverlässigkeit</div>
+    <div class="feature-desc">Wir möchten, dass Kunden sich auf Linkwerq verlassen können – für konsistente und vertrauenswürdige Ergebnisse, immer wieder.</div>
+</div>
+<div class="feature-box">
+    <img src="images/link.png" alt="Einfachheit" />
+    <div class="feature-title">Einfachheit</div>
+    <div class="feature-desc">Wir möchten Ihre Wege ganz einfach verbinden.</div>
+</div>
+</div>
+</div>
+<footer style="background-color: #1b79ea; color: white; text-align: center; padding: 16px 0; font-family: 'Open Sans', sans-serif; font-size: 0.9em; border-radius: 0 0 20px 20px; margin-top: 40px;">
+  &copy; 2025 Linkwerq. Alle Rechte vorbehalten.
+</footer>
+</body>
+</html>
+
