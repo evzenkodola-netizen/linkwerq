@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Linkwerq - Kvalitní řemeslníci online</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600&display=swap" rel="stylesheet" />
+<style>
+body {
+    margin: 0;
+    background: #1b79ea;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+header {
+    background: transparent;
+    padding: 16px 20px; /* zmenšený padding vlevo a vpravo */
+    display: flex;
+    justify-content: center; /* zarovnat na střed */
+    align-items: center;
+    gap: 40px; /* mezera mezi prvky v hlavičce */
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.logo {
+    color: #fff;
+    font-weight: 900;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+    margin-right: 20px;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+    font-size: 1em;
+    align-items: center;
+}
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+}
+.nav a.account {
+    background: #eff;
+    color: #1871e6;
+    border-radius: 7px;
+    padding: 4px 12px;
+    font-weight: 700;
+}
+.lang-switch {
+    display: flex;
+    gap: 10px;
+    font-weight: 600;
+    color: #fff;
+}
+.lang-switch a {
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 6px;
+}
+.lang-switch a.active, .lang-switch a:hover {
+    font-weight: 900;
+    text-decoration: underline;
+}
+.main-wrapper {
+    background: #fafafa;
+    max-width: 1100px;
+    margin: 24px auto 0;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px #1b79ea40;
+    padding: 40px 36px 8px;
+    font-family: 'Open Sans', sans-serif;
+}
+h1.title-header {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.6em;
+    color: #222;
+    margin: 10px 0 8px 0; /* menší mezera nad nadpisem */
+    font-family: 'Montserrat', sans-serif;
+}
+h1.title-header .highlight {
+    color: #f4c542; /* žlutá barva */
+}
+.decorative-line {
+    width: 120px;
+    height: 3px;
+    background: #f4c542;
+    margin: 0 auto 32px auto;
+    border-radius: 10px;
+}
+.intro-strip {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 32px auto;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 16px;
+}
+.intro-strip img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.features {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+.feature-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px 20px 28px;
+    flex: 1 1 220px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
+    font-family: 'Open Sans', sans-serif;
+}
+.feature-box img {
+    height: 40px;
+    margin-bottom: 14px;
+}
+.feature-title {
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 6px;
+    color: #1b79ea;
+}
+.feature-desc {
+    font-size: 1em;
+    color: #444;
+    line-height: 1.4em;
+}
+.presentation-text {
+    text-align: center;
+    background: #e0f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #007ba7;
+}
+.intro-forms {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+.form-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px 24px 28px;
+    width: 45%;
+    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+}
+.form-box:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+.form-box h3 {
+    margin-top: 0;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1871e6;
+    font-size: 1.4em;
+}
+.contact-form input,
+.contact-form textarea {
+    border: 1.5px solid #aad2fa;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 1em;
+    background: #fff;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    transition: border-color 0.2s ease;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #1b79ea;
+    box-shadow: 0 0 8px #1b79ea77;
+}
+.contact-form button {
+    background: #1b79ea;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.15em;
+    transition: background 0.3s ease;
+}
+.contact-form button:hover {
+    background: #155ab7;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Linkwerq</div>
+<nav class="nav">
+<a href="pro_firmy.html">Pro firmy</a>
+<a href="#">Pro řemeslníky</a>
+<a href="#">Služby</a>
+<a href="#">Spolupracujeme</a>
+<a href="#" class="account">Kontakt</a>
+</nav>
+<div class="lang-switch">
+<a href="index.html" class="active">Čeština</a>
+<span>|</span>
+<a href="index_en.html">English</a>
+<span>|</span>
+<a href="index_de.html">Deutsch</a>
+</div>
+</header>
+<div class="main-wrapper">
+<h1 class="title-header"><span class="highlight">Linkwerq</span> - Kvalitní řemeslníci online</h1>
+<div class="decorative-line"></div>
+
+<div class="presentation-text">
+  Vyberte odpovídající formulář podle toho, zda jste firma hledající řemeslníka, nebo řemeslník hledající práci. Vyplňte požadované údaje a my vám pomůžeme najít vhodné partnery.
+</div>
+
+<!-- Místo pro obrázek, zmenšené mezery -->
+<!-- Přibližně menší mezera nad nadpisem -->
+<!-- Původní blok s obrázkem je odstraněn, mezera zůstává přes margin -->
+
+<div class="intro-forms">
+  <div class="form-box">
+    <h3>Firma hledá řemeslníka</h3>
+    <form action="https://formspree.io/f/evzen.kodola@email.cz" method="POST" class="contact-form">
+      <input type="text" name="company_name" placeholder="Název firmy" required />
+      <textarea name="job_description" placeholder="Popis zakázky" required></textarea>
+      <input type="email" name="_replyto" placeholder="Email pro kontakt" required />
+      <button type="submit">Odeslat</button>
+    </form>
+  </div>
+  <div class="form-box">
+    <h3>Řemeslník hledá firmu</h3>
+    <form action="https://formspree.io/f/evzen.kodola@email.cz" method="POST" class="contact-form">
+      <input type="text" name="artisan_name" placeholder="Jméno" required />
+      <input type="text" name="specialization" placeholder="Specializace" required />
+      <input type="email" name="_replyto" placeholder="Email pro kontakt" required />
+      <button type="submit">Odeslat</button>
+    </form>
+  </div>
+</div>
+<div class="features">
+    <div class="feature-box">
+    <img src="images/toolbox.png" alt="Odbornost" />
+    <div class="feature-title">Odbornost</div>
+    <div class="feature-desc">Řemeslníci jsou opravdoví profesionálové, kteří rozumí vašim potřebám a poskytnou hodnotnou službu, jenž firmy potřebují.</div>
+</div>
+<div class="feature-box">
+    <img src="images/globe--v1.png" alt="Zahraničí" />
+    <div class="feature-title">Zahraničí</div>
+    <div class="feature-desc">Generování nových řešení pro řemeslné a stavební výzvy, jde to i mezinárodně.</div>
+</div>
+<div class="feature-box">
+    <img src="images/shield.png" alt="Spolehlivost" />
+    <div class="feature-title">Spolehlivost</div>
+    <div class="feature-desc">Chceme, aby klienti spoléhali na Linkwerq pro konzistentní a důvěryhodné výsledky pokaždé.</div>
+</div>
+<div class="feature-box">
+    <img src="images/link.png" alt="Jednoduchost" />
+    <div class="feature-title">Jednoduchost</div>
+    <div class="feature-desc">Jednoduše chceme spojit vaše cesty.</div>
+</div>
+
+</div>
+</div>
+<footer style="background-color: #1b79ea; color: white; text-align: center; padding: 16px 0; font-family: 'Open Sans', sans-serif; font-size: 0.9em; border-radius: 0 0 20px 20px; margin-top: 40px;">
+  &copy; 2025 Linkwerq. Všechna práva vyhrazena.
+</footer>
+</body>
+</html>
+```
