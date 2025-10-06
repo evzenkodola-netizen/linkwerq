@@ -23,12 +23,19 @@ header {
   flex-direction: row;
   color: #fff;
 }
+header > div.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
 .logo {
-  color: #fff;
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 1.5px;
-  margin-right: 20px;
+  margin-right: 0;
+  color: #fff;
+  white-space: nowrap;
 }
 .nav {
   display: flex;
@@ -71,12 +78,12 @@ header {
   box-shadow: 0 2px 16px #1b79ea40;
   padding: 40px 36px 8px;
   font-family: 'Open Sans', sans-serif;
+  color: #222;
 }
 h1.title-header {
   text-align: center;
   font-weight: 900;
   font-size: 2.6em;
-  color: #222;
   margin: 10px 0 30px 0;
   font-family: 'Montserrat', sans-serif;
 }
@@ -88,41 +95,17 @@ h1.title-header .highlight {
   background: #ffffffcc;
   border-radius: 16px;
   padding: 24px 28px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   box-shadow: 0 8px 20px rgba(27, 121, 234, 0.15);
   transition: box-shadow 0.3s ease;
 }
 .section-box:hover {
   box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
 }
-h2 {
-  margin-bottom: 14px;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.8em;
-}
-h2 svg {
-  width: 28px;
-  height: 28px;
-  fill: #1b79ea;
-}
 p {
   font-size: 1.15em;
   line-height: 1.6em;
   margin-bottom: 16px;
-}
-.icon-circle {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 2px solid #1b79ea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 footer {
   background-color: #1b79ea;
@@ -134,7 +117,8 @@ footer {
   border-radius: 0 0 20px 20px;
   margin-top: 40px;
 }
-/* Responsive styles */
+
+/* Responsive */
 @media screen and (max-width: 620px) {
   header {
     padding: 12px 10px;
@@ -155,15 +139,10 @@ footer {
   }
   h1.title-header {
     font-size: 1.8em;
-    margin-bottom: 24px;
   }
   .section-box {
     padding: 20px 20px;
-    margin-bottom: 40px;
-  }
-  h2 {
-    font-size: 1.4em;
-    gap: 8px;
+    margin-bottom: 30px;
   }
   p {
     font-size: 1em;
@@ -173,30 +152,21 @@ footer {
   h1.title-header {
     font-size: 1.4em;
   }
-  h2 {
-    font-size: 1.2em;
-    gap: 6px;
-  }
-  .section-box {
-    border-width: 1.5px;
-    padding: 16px 16px;
-    margin-bottom: 30px;
-  }
 }
 </style>
 </head>
 <body>
 <header>
-  <div style="display: flex; align-items: center; gap: 10px;">
-    <img src="images/logo.png" alt="Logo" style="width: 80px; height: auto;">
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Logo" style="width: 60px; height: auto;">
     <div class="logo">Linkwerq</div>
   </div>
   <nav class="nav">
     <a href="index_de.html">Startseite</a>
     <a href="for_companies_de.html">Für Firmen</a>
-    <a href="for_craftsmen_de.html" class="active">Für Handwerker</a>
-    <a href="services_de.html">Dienstleistungen</a>
+    <a href="for_craftsmen_de.html" class="account">Für Handwerker</a>
     <a href="partners_de.html">Partnerschaften</a>
+    <a href="contact_de.html">Kontakt</a>
   </nav>
   <div class="lang-switch">
     <a href="index.html">Čeština</a>
@@ -207,34 +177,27 @@ footer {
   </div>
 </header>
 <div class="main-wrapper">
-  <h1 class="title-header">Für Handwerker – finden Sie <span class="highlight">gut bezahlte Arbeit</span> und langfristige Aufträge</h1>
+  <h1 class="title-header">Für Handwerker – finden Sie <span class="highlight">gut bezahlte Jobs</span> und langfristige Aufträge</h1>
 
   <div class="section-box">
-    <h2><span class="icon-circle" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><path d="M22 42h20v4H22zM42 20v10l10 6v-4l-6-4v-8zM12 28v-6h28v6z"/></svg>
-    </span> Finden Sie gut bezahlte Arbeit in Deutschland</h2>
-    <p>Als Handwerker haben Sie die einmalige Gelegenheit, stabile und gut bezahlte Arbeit direkt bei deutschen oder verifizierten Firmen zu erhalten. Unsere Plattform hilft Ihnen, Aufträge und langfristige Projekte in ganz Deutschland zu finden, mit fairen Bezahlbedingungen und gesichertem Wohnraum.</p>
-    <p>Arbeiten Sie in einem professionellen Umfeld, entwickeln Sie Ihre Fähigkeiten weiter und sichern Sie sich ein stabiles Einkommen im Ausland dank verifizierter Partner, die hinter Ihnen stehen.</p>
-    <p>Kontaktieren Sie uns und starten Sie Ihre neue Karriere noch heute!</p>
+    <h2>Finden Sie gut bezahlte Arbeit in Deutschland</h2>
+    <p>Als Handwerker haben Sie die einzigartige Gelegenheit, stabile und gut bezahlte Arbeit direkt bei deutschen oder geprüften Firmen zu finden. Unsere Plattform hilft Ihnen bei der Suche nach Projekten unterschiedlichster Größe in ganz Deutschland, mit fairen Bezahlungsbedingungen und gesicherter Unterkunft.</p>
+    <p>Arbeiten Sie in einem professionellen Umfeld, entwickeln Sie Ihre Fähigkeiten weiter und sichern Sie sich ein stabiles Einkommen im Ausland dank geprüfter Partner, die hinter Ihnen stehen.</p>
+    <p>Kontaktieren Sie uns und starten Sie noch heute Ihre neue Karriere!</p>
   </div>
 
   <div class="section-box">
-    <h2><span class="icon-circle" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><circle cx="32" cy="32" r="30" stroke="#0077cc" stroke-width="4" fill="none"/><line x1="32" y1="32" x2="32" y2="16" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/><line x1="32" y1="32" x2="44" y2="44" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/></svg>
-    </span> Einfacher Zugang zu verifizierten Aufträgen</h2>
-    <p>Vergessen Sie langwierige Jobsuchen – mit Linkwerq erhalten Sie sofortigen Zugang zu geprüften und vertrauenswürdigen Firmen in Deutschland, die qualifizierte Handwerker wie Sie suchen.</p>
+    <h2>Einfacher Zugang zu geprüften Aufträgen</h2>
+    <p>Vergessen Sie die mühsame Arbeitssuche – mit Linkwerq erhalten Sie sofortigen Zugang zu vertrauenswürdigen und geprüften Firmen in Deutschland, die qualifizierte Handwerker wie Sie suchen.</p>
   </div>
 
   <div class="section-box">
-    <h2><span class="icon-circle" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><circle cx="32" cy="32" r="12" fill="#0077cc"/><path d="M32 20v24" stroke="#fff" stroke-width="4"/><path d="M20 32h24" stroke="#fff" stroke-width="4"/></svg>
-    </span> Unterstützung und Beratung</h2>
-    <p>Wir bieten Unterstützung bei der Kommunikation mit deutschen Firmen und helfen bei der Administration, damit Sie sich auf Ihre Arbeit und deren Qualität konzentrieren können.</p>
+    <h2>Unterstützung und Beratung</h2>
+    <p>Wir bieten Unterstützung bei der Kommunikation mit deutschen Firmen und helfen bei der Administration, damit Sie sich auf Ihre Arbeit und Qualität konzentrieren können.</p>
   </div>
 </div>
 <footer>
-&copy; 2025 Linkwerq. Alle Rechte vorbehalten.
+  &copy; 2025 Linkwerq. Alle Rechte vorbehalten.
 </footer>
 </body>
 </html>
-

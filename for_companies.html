@@ -23,12 +23,19 @@ header {
   flex-direction: row;
   color: #fff;
 }
+header > div.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
 .logo {
-  color: #fff;
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 1.5px;
-  margin-right: 20px;
+  margin-right: 0;
+  color: #fff;
+  white-space: nowrap;
 }
 .nav {
   display: flex;
@@ -71,12 +78,12 @@ header {
   box-shadow: 0 2px 16px #1b79ea40;
   padding: 40px 36px 8px;
   font-family: 'Open Sans', sans-serif;
+  color: #222;
 }
 h1.title-header {
   text-align: center;
   font-weight: 900;
   font-size: 2.6em;
-  color: #222;
   margin: 10px 0 30px 0;
   font-family: 'Montserrat', sans-serif;
 }
@@ -88,7 +95,7 @@ h1.title-header .highlight {
   background: #ffffffcc;
   border-radius: 16px;
   padding: 24px 28px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   box-shadow: 0 8px 20px rgba(27, 121, 234, 0.15);
   transition: box-shadow 0.3s ease;
 }
@@ -134,7 +141,7 @@ footer {
   border-radius: 0 0 20px 20px;
   margin-top: 40px;
 }
-/* Responsive styles */
+/* Responsive */
 @media screen and (max-width: 620px) {
   header {
     padding: 12px 10px;
@@ -155,11 +162,13 @@ footer {
   }
   h1.title-header {
     font-size: 1.8em;
-    margin-bottom: 24px;
+  }
+  .main-wrapper {
+    padding: 24px 7px 0 7px;
   }
   .section-box {
     padding: 20px 20px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   h2 {
     font-size: 1.4em;
@@ -177,61 +186,56 @@ footer {
     font-size: 1.2em;
     gap: 6px;
   }
-  .section-box {
-    border-width: 1.5px;
-    padding: 16px 16px;
-    margin-bottom: 30px;
-  }
 }
 </style>
 </head>
 <body>
 <header>
-  <div style="display: flex; align-items: center; gap: 10px;">
-    <img src="images/logo.png" alt="Logo" style="width: 80px; height: auto;">
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Logo" style="width: 60px; height: auto;">
     <div class="logo">Linkwerq</div>
-    <nav class="nav">
-      <a href="index_en.html">Home</a>
-      <a href="craftsmen.html">For Craftsmen</a>
-      <a href="services.html">Services</a>
-      <a href="partners.html">Partners</a>
-      <a href="contact.html" class="account">Contact</a>
-    </nav>
-    <div class="lang-switch">
-      <a href="index.html">Čeština</a>
-      <span>|</span>
-      <a href="index_en.html" class="active">English</a>
-      <span>|</span>
-      <a href="index_de.html">Deutsch</a>
-    </div>
+  </div>
+  <nav class="nav">
+    <a href="index_en.html">Home</a>
+    <a href="for_companies.html" class="account">For Companies</a>
+    <a href="craftsmen.html">For Craftsmen</a>
+    <a href="partners.html">Partners</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="lang-switch">
+    <a href="index.html">Čeština</a>
+    <span>|</span>
+    <a href="index_en.html" class="active">English</a>
+    <span>|</span>
+    <a href="index_de.html">Deutsch</a>
+  </div>
 </header>
 <div class="main-wrapper">
-  <h1 class="title-header">For Companies – find <span class="highlight">quality craftsmen</span> and skilled hands</h1>
+  <h1 class="title-header">For Companies – find <span class="highlight">qualified craftsmen</span> and talented professionals</h1>
 
   <div class="section-box">
     <h2><span class="icon-circle" aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><path d="M43.259 20.74l-6-6A4 4 0 0036 17v10a4 4 0 00.732 2.124l-6.342 6.342A6 6 0 0028 34v4a4 4 0 006.338 3.262l6-6A4 4 0 0036 33v-10a4 4 0 00-1.74-3.26l-6 6A4 4 0 0028 26v4a4 4 0 006.338 3.262l6-6A4 4 0 0036 19V9a4 4 0 00-4-4h-8a4 4 0 00-4 4v10a4 4 0 001.74 3.26l6-6A4 4 0 0036 22v10a4 4 0 01-4 4h-8a4 4 0 01-4-4V22a4 4 0 014-4h8a4 4 0 014 4v10a4 4 0 01-4 4h-8a4 4 0 01-4-4v-2a6 6 0 016-6h8v-4h-8a6 6 0 00-6 6v2a6 6 0 006 6h8v4h-8a6 6 0 01-6-6V14a4 4 0 014-4h8a4 4 0 014 4v10z"/></svg>
-    </span> Easy and reliable connection</h2>
-    <p>Linkwerq is a modern platform that allows companies to quickly and efficiently find experienced and verified craftsmen as well as skilled workers who handle your projects with precision and professionalism.</p>
+    </span> Easy and Reliable Connection</h2>
+    <p>Linkwerq is a modern platform that enables companies to quickly and effectively find experienced and verified craftsmen as well as skilled professionals who handle projects with precision and professionalism.</p>
   </div>
 
   <div class="section-box">
     <h2><span class="icon-circle" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc">ircle cx="32" cy="32" r="30" stroke="#0077cc" stroke-width="4" fillll="none"/><line x1="32" y1="32" x2="32" y2="16" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/><line x1="32" y1="32" x2="44" y2="44" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/></svg>
-    </span> Save time and effort</h2>
-    <p>Forget lengthy searches or unclear references. With Linkwerq, you get instant access to experts ready to assist with projects of all sizes — from minor repairs to complex orders.</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><circle cx="32" cy="32" r="30" stroke="#0077cc" stroke-width="4" fill="none"/><line x1="32" y1="32" x2="32" y2="16" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/><line x1="32" y1="32" x2="44" y2="44" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/></svg>
+    </span> Save Time and Effort</h2>
+    <p>Forget long searches or unclear references. With Linkwerq, you get immediate access to experts ready to support projects of any scale – from small repairs to complex contracts.</p>
   </div>
 
   <div class="section-box">
     <h2><span class="icon-circle" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc">ircle cx="32" cy="32" r="12" fill="#"#0077cc"/><path d="M32 20v24" stroke="#fff" stroke-width="4"/><path d="M20 32h24" stroke="#fff" stroke-width="4"/></svg>
-    </span> Connections that work</h2>
-    <p>Enjoy a simple and comfortable environment where you can conveniently select, communicate, and arrange orders without unnecessary complications.</p>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><circle cx="32" cy="32" r="12" fill="#0077cc"/><path d="M32 20v24" stroke="#fff" stroke-width="4"/><path d="M20 32h24" stroke="#fff" stroke-width="4"/></svg>
+    </span> Connections That Work</h2>
+    <p>Enjoy a simple and comfortable environment where you can conveniently select, communicate, and arrange contracts – without unnecessary complications.</p>
   </div>
 </div>
 <footer>
-&copy; 2025 Linkwerq. All rights reserved.
+  &copy; 2025 Linkwerq. All rights reserved.
 </footer>
 </body>
 </html>
-
