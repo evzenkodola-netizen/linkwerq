@@ -13,46 +13,62 @@ body {
   color: #222;
 }
 header {
-  background: transparent;
-  padding: 16px 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  flex-direction: row;
+  gap: 20px;
+  padding: 16px 20px;
+  background: transparent;
   color: #fff;
 }
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.header-inner img {
+  width: 56px;
+  height: auto;
+}
 .logo {
-  color: #fff;
   font-weight: 900;
-  font-size: 2em;
+  font-size: 2rem;
   letter-spacing: 1.5px;
-  margin-right: 20px;
+  white-space: nowrap;
 }
 .nav {
   display: flex;
-  gap: 20px;
-  font-size: 1em;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 250px;
 }
 .nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 400;
+  padding: 6px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
 }
-.nav a.account {
+.nav a.active, .nav a.account {
+  font-weight: 700;
   background: #eff;
   color: #1871e6;
-  border-radius: 7px;
-  padding: 4px 12px;
-  font-weight: 700;
+}
+.nav a:hover, .nav a.account:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 .lang-switch {
   display: flex;
   gap: 10px;
   font-weight: 600;
-  color: #fff;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 .lang-switch a {
   color: #fff;
@@ -63,6 +79,7 @@ header {
   font-weight: 900;
   text-decoration: underline;
 }
+
 .main-wrapper {
   background: #fafafa;
   max-width: 1100px;
@@ -77,7 +94,6 @@ h1.title-header {
   text-align: center;
   font-weight: 900;
   font-size: 2.6em;
-  color: #222;
   margin: 10px 0 30px 0;
   font-family: 'Montserrat', sans-serif;
 }
@@ -127,6 +143,7 @@ footer {
   border-radius: 0 0 20px 20px;
   margin-top: 40px;
 }
+
 /* Mobilní responzivní úpravy */
 @media screen and (max-width: 620px) {
   header {
@@ -180,22 +197,24 @@ footer {
 </head>
 <body>
 <header>
-  <div style="display: flex; align-items: center; gap: 10px;">
-    <img src="images/logo.png" alt="Logo" style="width: 80px; height: auto;">
+  <div class="header-inner">
+    <img src="images/logo.png" alt="Logo" />
     <div class="logo">Linkwerq</div>
-    <nav class="nav">
-      <a href="index.html">Domů</a>
-      <a href="pro_firmy.html">Pro firmy</a>
-      <a href="remeslnici.html">Pro řemeslníky</a>
-      <a href="kontakt.html" class="account">Kontakt</a>
-    </nav>
-    <div class="lang-switch">
-      <a href="index.html">Čeština</a>
-      <span>|</span>
-      <a href="index_en.html">English</a>
-      <span>|</span>
-      <a href="index_de.html">Deutsch</a>
-    </div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Domů</a>
+    <a href="pro_firmy.html">Pro firmy</a>
+    <a href="spolupracujeme.html" class="active">Spolupracujeme</a>
+    <a href="remeslnici.html">Pro řemeslníky</a>
+    <a href="kontakt.html" class="account">Kontakt</a>
+  </nav>
+  <div class="lang-switch">
+    <a href="index.html">Čeština</a>
+    <span>|</span>
+    <a href="index_en.html">English</a>
+    <span>|</span>
+    <a href="index_de.html">Deutsch</a>
+  </div>
 </header>
 <div class="main-wrapper">
   <h1 class="title-header">Spolupracujeme & podpora</h1>
@@ -215,4 +234,3 @@ footer {
 </footer>
 </body>
 </html>
-
