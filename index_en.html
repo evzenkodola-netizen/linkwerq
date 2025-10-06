@@ -3,248 +3,251 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Linkwerq - Quality Craftsmen Online</title>
+<title>Home - Linkwerq</title>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600&display=swap" rel="stylesheet" />
 <style>
 body {
-    margin: 0;
-    background: #1b79ea;
-    font-family: 'Montserrat', Arial, sans-serif;
-    color: #222;
+  margin: 0;
+  background: #1b79ea;
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #222;
 }
 header {
-    background: transparent;
-    padding: 16px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    flex-direction: row;
-    color: #fff;
+  background: transparent;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  color: #fff;
 }
 header > div.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
 }
 .logo {
-    font-weight: 900;
-    font-size: 2em;
-    letter-spacing: 1.5px;
-    margin-right: 0;
-    color: #fff;
+  font-weight: 900;
+  font-size: 2em;
+  letter-spacing: 1.5px;
+  margin-right: 0;
+  color: #fff;
+  white-space: nowrap;
 }
 .nav {
-    display: flex;
-    gap: 20px;
-    font-size: 1em;
-    align-items: center;
+  display: flex;
+  gap: 20px;
+  font-size: 1em;
+  align-items: center;
 }
 .nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 400;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
 }
 .nav a.account {
-    background: #eff;
-    color: #1871e6;
-    border-radius: 7px;
-    padding: 4px 12px;
-    font-weight: 700;
+  background: #eff;
+  color: #1871e6;
+  border-radius: 7px;
+  padding: 4px 12px;
+  font-weight: 700;
 }
 .lang-switch {
-    display: flex;
-    gap: 10px;
-    font-weight: 600;
-    color: #fff;
+  display: flex;
+  gap: 10px;
+  font-weight: 600;
+  color: #fff;
 }
 .lang-switch a {
-    color: #fff;
-    text-decoration: none;
-    padding: 2px 6px;
+  color: #fff;
+  text-decoration: none;
+  padding: 2px 6px;
 }
-.lang-switch a.active,
-.lang-switch a:hover {
-    font-weight: 900;
-    text-decoration: underline;
+.lang-switch a.active, .lang-switch a:hover {
+  font-weight: 900;
+  text-decoration: underline;
 }
 .main-wrapper {
-    background: #fafafa;
-    max-width: 1100px;
-    margin: 24px auto 0;
-    border-radius: 20px;
-    box-shadow: 0 2px 16px #1b79ea40;
-    padding: 40px 36px 8px;
-    font-family: 'Open Sans', sans-serif;
+  background: #fafafa;
+  max-width: 1100px;
+  margin: 24px auto 0;
+  border-radius: 20px;
+  box-shadow: 0 2px 16px #1b79ea40;
+  padding: 40px 36px 8px;
+  font-family: 'Open Sans', sans-serif;
+  color: #222;
 }
 h1.title-header {
-    text-align: center;
-    font-weight: 900;
-    font-size: 2.6em;
-    margin: 10px 0 8px 0;
-    font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.6em;
+  margin: 10px 0 30px 0;
+  font-family: 'Montserrat', sans-serif;
 }
 h1.title-header .highlight {
-    color: #f4c542;
+  color: #f4c542;
 }
 .decorative-line {
-    width: 120px;
-    height: 3px;
-    background: #f4c542;
-    margin: 0 auto 32px auto;
-    border-radius: 10px;
+  width: 120px;
+  height: 3px;
+  background: #f4c542;
+  margin: 0 auto 32px auto;
+  border-radius: 10px;
 }
 .presentation-text {
-    text-align: center;
-    background: #e0f7fa;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 28px;
-    font-size: 1.2em;
-    font-weight: 600;
-    color: #007ba7;
+  text-align: center;
+  background: #e0f7fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #007ba7;
 }
 .intro-forms {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    margin-bottom: 36px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
 }
 .form-box {
-    background: #fff;
-    border-radius: 12px;
-    padding: 24px 24px 28px;
-    width: 45%;
-    box-sizing: border-box;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 24px 28px;
+  width: 45%;
+  box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
 }
 .form-box:hover {
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 .form-box h3 {
-    margin-top: 0;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #1871e6;
-    font-size: 1.4em;
+  margin-top: 0;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1871e6;
+  font-size: 1.4em;
 }
 .contact-form input,
 .contact-form textarea {
-    border: 1.5px solid #aad2fa;
-    border-radius: 12px;
-    padding: 14px 16px;
-    font-size: 1em;
-    background: #fff;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 16px;
-    transition: border-color 0.2s ease;
+  border: 1.5px solid #aad2fa;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1em;
+  background: #fff;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  transition: border-color 0.2s ease;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #1b79ea;
-    box-shadow: 0 0 8px #1b79ea77;
+  border-color: #1b79ea;
+  box-shadow: 0 0 8px #1b79ea77;
 }
 .contact-form button {
-    background: #1b79ea;
-    color: #fff;
-    font-weight: 700;
-    border: none;
-    width: 100%;
-    padding: 14px;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 1.15em;
-    transition: background 0.3s ease;
+  background: #1b79ea;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.15em;
+  transition: background 0.3s ease;
 }
 .contact-form button:hover {
-    background: #155ab7;
+  background: #155ab7;
 }
 .features {
-    display: flex;
-    gap: 32px;
-    justify-content: center;
-    margin-bottom: 24px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
 }
 .feature-box {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px 20px 28px;
-    flex: 1 1 220px;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 20px 28px;
+  flex: 1 1 220px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.06);
+  font-family: 'Open Sans', sans-serif;
 }
 .feature-box img {
-    height: 40px;
-    margin-bottom: 14px;
+  height: 40px;
+  margin-bottom: 14px;
 }
 .feature-title {
-    font-weight: 600;
-    font-size: 1.3em;
-    margin-bottom: 6px;
-    color: #1b79ea;
+  font-weight: 600;
+  font-size: 1.3em;
+  margin-bottom: 6px;
+  color: #1b79ea;
 }
 .feature-desc {
-    font-size: 1em;
-    color: #444;
-    line-height: 1.4em;
+  font-size: 1em;
+  color: #444;
+  line-height: 1.4em;
 }
-/* Responsive styles */
+/* Mobile */
 @media screen and (max-width: 620px) {
-    header {
-        flex-direction: column !important;
-        align-items: center !important;
-        padding: 12px 10px !important;
-        gap: 20px !important;
-    }
-    header > div.logo-container {
-        display: flex !important;
-        align-items: center !important;
-        gap: 10px !important;
-        justify-content: center !important;
-    }
-    .logo {
-        font-size: 1.6em !important;
-        margin-right: 0 !important;
-    }
-    .nav {
-        gap: 10px !important;
-        font-size: 0.9em !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-    }
-    .intro-forms {
-        flex-direction: column !important;
-        width: 90% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        gap: 20px !important;
-    }
-    .form-box {
-        width: 100% !important;
-        margin-bottom: 20px !important;
-    }
+  header {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 12px 10px !important;
+    gap: 20px !important;
+  }
+  header > div.logo-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
+  .logo {
+    font-size: 1.6em !important;
+    margin-right: 0 !important;
+  }
+  .nav {
+    gap: 10px !important;
+    font-size: 0.9em !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  .intro-forms {
+    flex-direction: column !important;
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    gap: 20px !important;
+  }
+  .form-box {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  .features {
+    gap: 16px !important;
+  }
+  .feature-box {
+    flex: 1 1 100% !important;
+  }
 }
 @media screen and (max-width: 400px) {
-    .logo {
-        font-size: 1.4em !important;
-    }
-    h1.title-header {
-        font-size: 1.8em !important;
-    }
-    .feature-box {
-        flex: 1 1 100% !important;
-    }
-    .features {
-        gap: 16px !important;
-    }
+  .logo {
+    font-size: 1.4em !important;
+  }
+  h1.title-header {
+    font-size: 1.8em !important;
+  }
 }
 </style>
 </head>
@@ -255,11 +258,11 @@ h1.title-header .highlight {
     <div class="logo">Linkwerq</div>
   </div>
   <nav class="nav">
-    <a href="for_companies.html">For Companies</a>
-    <a href="craftsmen.html">For Craftsmen</a>
-    <a href="services.html">Services</a>
-    <a href="partners.html">Partners</a>
-    <a href="contact.html" class="account">Contact</a>
+    <a href="index_en.html" class="active">Home</a>
+    <a href="for_companies_en.html">For Companies</a>
+    <a href="for_craftsmen_en.html">For Craftsmen</a>
+    <a href="partners_en.html">Partnerships</a>
+    <a href="contact_en.html">Contact</a>
   </nav>
   <div class="lang-switch">
     <a href="index.html">Čeština</a>
@@ -270,59 +273,56 @@ h1.title-header .highlight {
   </div>
 </header>
 <div class="main-wrapper">
-<h1 class="title-header"><span class="highlight">Linkwerq</span> - Quality Craftsmen Online</h1>
-<div class="decorative-line"></div>
-
-<div class="presentation-text">
-  Select the appropriate form depending on whether you are a company looking for a craftsman or a craftsman looking for work. Fill in the required details and we will help you find suitable partners.
-</div>
-
-<div class="intro-forms">
-  <div class="form-box">
-    <h3>Company Looking for Craftsman</h3>
-    <form action="https://formspree.io/f/evzen.kodola@email.cz" method="POST" class="contact-form">
-      <input type="text" name="company_name" placeholder="Company Name" required />
-      <textarea name="job_description" placeholder="Job Description" required></textarea>
-      <input type="email" name="_replyto" placeholder="Contact Email" required />
-      <button type="submit">Submit</button>
-    </form>
+  <h1 class="title-header"><span class="highlight">Linkwerq</span> - Quality Craftsmen Online</h1>
+  <div class="decorative-line"></div>
+  <div class="presentation-text">
+    Choose the appropriate form depending on whether you are a company looking for craftsmen or a craftsman looking for work. Fill in the required details and we will help you find suitable partners.
   </div>
-  <div class="form-box">
-    <h3>Craftsman Looking for Company</h3>
-    <form action="https://formspree.io/f/evzen.kodola@email.cz" method="POST" class="contact-form">
-      <input type="text" name="artisan_name" placeholder="Name" required />
-      <input type="text" name="specialization" placeholder="Specialization" required />
-      <input type="email" name="_replyto" placeholder="Contact Email" required />
-      <button type="submit">Submit</button>
-    </form>
+  <div class="intro-forms">
+    <div class="form-box">
+      <h3>Company Looking for Craftsmen</h3>
+      <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
+        <input type="text" name="company_name" placeholder="Company Name" required />
+        <textarea name="job_description" placeholder="Job Description" required></textarea>
+        <input type="email" name="_replyto" placeholder="Contact Email" required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div class="form-box">
+      <h3>Craftsman Looking for Company</h3>
+      <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
+        <input type="text" name="artisan_name" placeholder="Name" required />
+        <input type="text" name="specialization" placeholder="Specialization" required />
+        <input type="email" name="_replyto" placeholder="Contact Email" required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
   </div>
-</div>
-<div class="features">
+  <div class="features">
     <div class="feature-box">
-    <img src="images/toolbox.png" alt="Expertise" />
-    <div class="feature-title">Expertise</div>
-    <div class="feature-desc">Craftsmen are true professionals who understand your needs and provide valuable services that companies require.</div>
-</div>
-<div class="feature-box">
-    <img src="images/globe--v1.png" alt="International" />
-    <div class="feature-title">International</div>
-    <div class="feature-desc">Generating new solutions for craft and construction challenges, even internationally.</div>
-</div>
-<div class="feature-box">
-    <img src="images/shield.png" alt="Reliability" />
-    <div class="feature-title">Reliability</div>
-    <div class="feature-desc">We want clients to rely on Linkwerq for consistent and trustworthy results every time.</div>
-</div>
-<div class="feature-box">
-    <img src="images/link.png" alt="Simplicity" />
-    <div class="feature-title">Simplicity</div>
-    <div class="feature-desc">We simply want to connect your paths.</div>
-</div>
-</div>
+      <img src="images/toolbox.png" alt="Expertise" />
+      <div class="feature-title">Expertise</div>
+      <div class="feature-desc">Craftsmen are real professionals who understand your needs and provide valuable services that companies require.</div>
+    </div>
+    <div class="feature-box">
+      <img src="images/globe--v1.png" alt="International" />
+      <div class="feature-title">International</div>
+      <div class="feature-desc">Generating new solutions for craft and construction challenges, even internationally.</div>
+    </div>
+    <div class="feature-box">
+      <img src="images/shield.png" alt="Reliability" />
+      <div class="feature-title">Reliability</div>
+      <div class="feature-desc">We want clients to rely on Linkwerq for consistent and trustworthy results every time.</div>
+    </div>
+    <div class="feature-box">
+      <img src="images/link.png" alt="Simplicity" />
+      <div class="feature-title">Simplicity</div>
+      <div class="feature-desc">We simply want to connect your paths.</div>
+    </div>
+  </div>
 </div>
 <footer style="background-color: #1b79ea; color: white; text-align: center; padding: 16px 0; font-family: 'Open Sans', sans-serif; font-size: 0.9em; border-radius: 0 0 20px 20px; margin-top: 40px;">
   &copy; 2025 Linkwerq. All rights reserved.
 </footer>
 </body>
 </html>
-

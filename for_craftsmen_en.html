@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Kontakt - Linkwerq</title>
+<title>For Craftsmen - Linkwerq</title>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600&display=swap" rel="stylesheet" />
 <style>
 body {
@@ -87,6 +87,9 @@ h1.title-header {
   margin: 10px 0 30px 0;
   font-family: 'Montserrat', sans-serif;
 }
+h1.title-header .highlight {
+  color: #f4c542;
+}
 .section-box {
   border: 2px solid #1b79ea;
   background: #ffffffcc;
@@ -99,53 +102,10 @@ h1.title-header {
 .section-box:hover {
   box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
 }
-form.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.contact-form input,
-.contact-form textarea {
-  border: 1.5px solid #aad2fa;
-  border-radius: 12px;
-  padding: 14px 16px;
-  font-size: 1em;
-  background: #fff;
-  outline: none;
-  width: 100%;
-  box-sizing: border-box;
-  transition: border-color 0.2s ease;
-  resize: vertical;
-}
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #1b79ea;
-  box-shadow: 0 0 8px #1b79ea77;
-}
-.contact-form button {
-  background: #1b79ea;
-  color: #fff;
-  font-weight: 700;
-  border: none;
-  padding: 14px;
-  border-radius: 12px;
-  cursor: pointer;
+p {
   font-size: 1.15em;
-  transition: background 0.3s ease;
-  width: 100%;
-}
-.contact-form button:hover {
-  background: #155ab7;
-}
-footer {
-  background-color: #1b79ea;
-  color: white;
-  text-align: center;
-  padding: 16px 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9em;
-  border-radius: 0 0 20px 20px;
-  margin-top: 40px;
+  line-height: 1.6em;
+  margin-bottom: 16px;
 }
 /* Responsive */
 @media screen and (max-width: 620px) {
@@ -173,6 +133,9 @@ footer {
     padding: 20px 20px;
     margin-bottom: 30px;
   }
+  p {
+    font-size: 1em;
+  }
 }
 @media screen and (max-width: 400px) {
   h1.title-header {
@@ -184,46 +147,46 @@ footer {
 <body>
 <header>
   <div class="logo-container">
-    <img src="images/logo.png" alt="Logo" style="width: 60px; height: auto;">
+    <img src="images/logo.png" alt="Linkwerq Logo" style="height: 60px;">
     <div class="logo">Linkwerq</div>
   </div>
   <nav class="nav">
-    <a href="index_de.html">Startseite</a>
-    <a href="for_companies_de.html">Für Firmen</a>
-    <a href="for_craftsmen_de.html">Für Handwerker</a>
-    <a href="partners_de.html">Partnerschaften</a>
-    <a href="contact_de.html" class="account">Kontakt</a>
+    <a href="index_en.html">Home</a>
+    <a href="for_companies_en.html">For Companies</a>
+    <a href="for_craftsmen_en.html" class="account">For Craftsmen</a>
+    <a href="partners_en.html">Partnerships</a>
+    <a href="contact_en.html">Contact</a>
   </nav>
   <div class="lang-switch">
     <a href="index.html">Čeština</a>
     <span>|</span>
-    <a href="index_en.html">English</a>
+    <a href="index_en.html" class="active">English</a>
     <span>|</span>
-    <a href="index_de.html" class="active">Deutsch</a>
+    <a href="index_de.html">Deutsch</a>
   </div>
 </header>
-
 <div class="main-wrapper">
-  <h1 class="title-header">Kontaktieren Sie uns</h1>
+  <h1 class="title-header">For Craftsmen – find <span class="highlight">well-paid jobs</span> and long-term contracts</h1>
 
   <div class="section-box">
-    <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Name" required />
-      <input type="email" name="_replyto" placeholder="E-Mail" required />
-      <textarea name="message" placeholder="Nachricht" rows="6" required></textarea>
-      <button type="submit">Senden</button>
-    </form>
+    <h2>Find well-paid work in Germany</h2>
+    <p>As a craftsman, you have a unique opportunity to gain stable and well-paid work directly with German or verified companies. Our platform helps you find projects of varying sizes across Germany, with fair pay and secured accommodation.</p>
+    <p>Work in a professional environment, develop your skills further, and secure a stable income abroad thanks to verified partners who stand behind you.</p>
+    <p>Contact us and start your new career today!</p>
   </div>
 
   <div class="section-box">
-    <h2>Über die Plattform</h2>
-    <p>Die Plattform Linkwerq wird mit dem Fokus auf die Verbindung von Handwerkern und Firmen im digitalen Zeitalter entwickelt. Wir verbessern sie kontinuierlich, um sie für alle Nutzer so übersichtlich und effektiv wie möglich zu gestalten.</p>
-    <p>Unser Ziel ist es, die Kommunikation zu erleichtern, die Suche nach Arbeit und zuverlässigen Arbeitskräften zu verkürzen und maßgeschneiderte moderne Lösungen anzubieten.</p>
+    <h2>Easy access to verified jobs</h2>
+    <p>Forget tedious job searching – with Linkwerq, you get immediate access to trusted and verified companies in Germany searching for qualified craftsmen like you.</p>
+  </div>
+
+  <div class="section-box">
+    <h2>Support and consultancy</h2>
+    <p>We provide support in communication with German companies and help with administration, so you can fully focus on your work and its quality.</p>
   </div>
 </div>
-
 <footer>
-  &copy; 2025 Linkwerq. Alle Rechte vorbehalten.
+  &copy; 2025 Linkwerq. All rights reserved.
 </footer>
 </body>
 </html>

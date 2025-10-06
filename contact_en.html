@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Partnerschaften - Linkwerq</title>
+<title>Contact - Linkwerq</title>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600&display=swap" rel="stylesheet" />
 <style>
 body {
@@ -78,6 +78,7 @@ header > div.logo-container {
   box-shadow: 0 2px 16px #1b79ea40;
   padding: 40px 36px 8px;
   font-family: 'Open Sans', sans-serif;
+  color: #222;
 }
 h1.title-header {
   text-align: center;
@@ -86,41 +87,55 @@ h1.title-header {
   margin: 10px 0 30px 0;
   font-family: 'Montserrat', sans-serif;
 }
-.partner-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  justify-content: center;
-}
-.partner-card {
-  background: #fff;
+.section-box {
   border: 2px solid #1b79ea;
-  border-radius: 14px;
-  padding: 28px 32px;
-  min-width: 260px;
-  max-width: 340px;
-  text-align: center;
-  box-shadow: 0 4px 14px rgba(27, 121, 234, 0.12);
+  background: #ffffffcc;
+  border-radius: 16px;
+  padding: 24px 28px;
   margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(27, 121, 234, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+.section-box:hover {
+  box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
+}
+form.contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 16px;
 }
-.partner-card img {
-  max-width: 120px;
-  max-height: 120px;
-  margin-bottom: 16px;
-  margin-top: 10px;
-}
-.partner-card h2 {
-  font-size: 1.4em;
-  margin: 0 0 10px 0;
-  color: #1b79ea;
-  font-weight: 900;
-}
-.partner-card p {
-  margin: 0 0 10px 0;
+.contact-form input,
+.contact-form textarea {
+  border: 1.5px solid #aad2fa;
+  border-radius: 12px;
+  padding: 14px 16px;
   font-size: 1em;
+  background: #fff;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1b79ea;
+  box-shadow: 0 0 8px #1b79ea77;
+}
+.contact-form button {
+  background: #1b79ea;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.15em;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+.contact-form button:hover {
+  background: #155ab7;
 }
 footer {
   background-color: #1b79ea;
@@ -132,6 +147,7 @@ footer {
   border-radius: 0 0 20px 20px;
   margin-top: 40px;
 }
+/* Responsive */
 @media screen and (max-width: 620px) {
   header {
     padding: 12px 10px;
@@ -153,20 +169,14 @@ footer {
   h1.title-header {
     font-size: 1.8em;
   }
-  .main-wrapper {
-    padding: 24px 7px 0 7px;
+  .section-box {
+    padding: 20px 20px;
+    margin-bottom: 30px;
   }
-  .partner-list {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  .partner-card {
-    margin-bottom: 22px;
-    width: 97%;
-    min-width: unset;
-    max-width: unset;
-    padding: 18px 5px;
+}
+@media screen and (max-width: 400px) {
+  h1.title-header {
+    font-size: 1.4em;
   }
 }
 </style>
@@ -178,37 +188,42 @@ footer {
     <div class="logo">Linkwerq</div>
   </div>
   <nav class="nav">
-    <a href="index_de.html">Startseite</a>
-    <a href="for_companies_de.html">Für Firmen</a>
-    <a href="for_craftsmen_de.html">Für Handwerker</a>
-    <a href="partners_de.html" class="account">Partnerschaften</a>
-    <a href="kontakt_de.html">Kontakt</a>
+    <a href="index_en.html">Home</a>
+    <a href="for_companies_en.html">For Companies</a>
+    <a href="for_craftsmen_en.html">For Craftsmen</a>
+    <a href="partners_en.html">Partnerships</a>
+    <a href="contact_en.html" class="account">Contact</a>
   </nav>
   <div class="lang-switch">
     <a href="index.html">Čeština</a>
     <span>|</span>
-    <a href="index_en.html">English</a>
+    <a href="index_en.html" class="active">English</a>
     <span>|</span>
-    <a href="index_de.html" class="active">Deutsch</a>
+    <a href="index_de.html">Deutsch</a>
   </div>
 </header>
-<div class="main-wrapper">
-  <h1 class="title-header">Partnerschaften & Unterstützung</h1>
 
-  <div class="partner-list">
-    <div class="partner-card">
-      <img src="aspora.png" alt="Aspora s.r.o. Logo" />
-      <h2>Aspora s.r.o.</h2>
-      <p><a href="https://aspora.building" target="_blank">aspora.building</a></p>
-      <p>Ein Bau- und Montageunternehmen, das unsere Projekte unterstützt und Handwerker mit hochwertigen Bauvorhaben in Deutschland verbindet.</p>
-    </div>
-    <!-- Weitere Partner können hier hinzugefügt werden -->
+<div class="main-wrapper">
+  <h1 class="title-header">Contact Us</h1>
+
+  <div class="section-box">
+    <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="_replyto" placeholder="Email" required />
+      <textarea name="message" placeholder="Message" rows="6" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div class="section-box">
+    <h2>About the Platform</h2>
+    <p>Linkwerq is developed with a focus on connecting craftsmen and companies in the digital age. We continuously improve it to be as clear and efficient as possible for all users.</p>
+    <p>Our goal is to facilitate communication, shorten the search for jobs and reliable workforce, and offer tailored modern solutions.</p>
   </div>
 </div>
+
 <footer>
-  &copy; 2025 Linkwerq. Alle Rechte vorbehalten.
+  &copy; 2025 Linkwerq. All rights reserved.
 </footer>
 </body>
 </html>
-
- 

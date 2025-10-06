@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact - Linkwerq</title>
+<title>Kontakt - Linkwerq</title>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600&display=swap" rel="stylesheet" />
 <style>
 body {
@@ -23,12 +23,19 @@ header {
   flex-direction: row;
   color: #fff;
 }
+header > div.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
 .logo {
-  color: #fff;
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 1.5px;
-  margin-right: 20px;
+  margin-right: 0;
+  color: #fff;
+  white-space: nowrap;
 }
 .nav {
   display: flex;
@@ -77,7 +84,6 @@ h1.title-header {
   text-align: center;
   font-weight: 900;
   font-size: 2.6em;
-  color: #222;
   margin: 10px 0 30px 0;
   font-family: 'Montserrat', sans-serif;
 }
@@ -93,10 +99,43 @@ h1.title-header {
 .section-box:hover {
   box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
 }
-p {
+form.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.contact-form input,
+.contact-form textarea {
+  border: 1.5px solid #aad2fa;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1em;
+  background: #fff;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1b79ea;
+  box-shadow: 0 0 8px #1b79ea77;
+}
+.contact-form button {
+  background: #1b79ea;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
   font-size: 1.15em;
-  line-height: 1.6em;
-  margin-bottom: 16px;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+.contact-form button:hover {
+  background: #155ab7;
 }
 footer {
   background-color: #1b79ea;
@@ -108,6 +147,7 @@ footer {
   border-radius: 0 0 20px 20px;
   margin-top: 40px;
 }
+/* Responsive */
 @media screen and (max-width: 620px) {
   header {
     padding: 12px 10px;
@@ -128,66 +168,62 @@ footer {
   }
   h1.title-header {
     font-size: 1.8em;
-    margin-bottom: 24px;
   }
   .section-box {
     padding: 20px 20px;
     margin-bottom: 30px;
-  }
-  p {
-    font-size: 1em;
   }
 }
 @media screen and (max-width: 400px) {
   h1.title-header {
     font-size: 1.4em;
   }
-  .section-box {
-    border-width: 1.5px;
-    padding: 16px 16px;
-    margin-bottom: 20px;
-  }
 }
 </style>
 </head>
 <body>
 <header>
-  <div style="display: flex; align-items: center; gap: 10px;">
-    <img src="images/logo.png" alt="Logo" style="width: 80px; height: auto;">
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Logo" style="width: 60px; height: auto;">
     <div class="logo">Linkwerq</div>
-    <nav class="nav">
-      <a href="index_en.html">Home</a>
-      <a href="for_companies.html">For Companies</a>
-      <a href="craftsmen.html">For Craftsmen</a>
-      <a href="services.html">Services</a>
-      <a href="partners.html" class="account">Partners</a>
-    </nav>
-    <div class="lang-switch">
-      <a href="index.html">Čeština</a>
-      <span>|</span>
-      <a href="index_en.html" class="active">English</a>
-      <span>|</span>
-      <a href="index_de.html">Deutsch</a>
-    </div>
+  </div>
+  <nav class="nav">
+    <a href="index_de.html">Startseite</a>
+    <a href="for_companies_de.html">Für Firmen</a>
+    <a href="for_craftsmen_de.html">Für Handwerker</a>
+    <a href="partners_de.html">Partnerschaften</a>
+    <a href="kontakt_de.html" class="account">Kontakt</a>
+  </nav>
+  <div class="lang-switch">
+    <a href="index.html">Čeština</a>
+    <span>|</span>
+    <a href="index_en.html">English</a>
+    <span>|</span>
+    <a href="index_de.html" class="active">Deutsch</a>
+  </div>
 </header>
+
 <div class="main-wrapper">
-  <h1 class="title-header">Contact Us</h1>
+  <h1 class="title-header">Kontaktieren Sie uns</h1>
 
   <div class="section-box">
-    <p><strong>Website:</strong> !!!!!!!!!!!</p>
-    <p><strong>Email:</strong> !!!!!!!!!!!</p>
-    <p><strong>Phone:</strong> !!!!!!!!!!!</p>
+    <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="_replyto" placeholder="E-Mail" required />
+      <textarea name="message" placeholder="Nachricht" rows="6" required></textarea>
+      <button type="submit">Senden</button>
+    </form>
   </div>
 
   <div class="section-box">
-    <h2>About the platform development</h2>
-    <p>The Linkwerq platform is developed with a focus on connecting craftsmen and companies in the digital age. We regularly improve it to be as clear and efficient as possible for all users.</p>
-    <p>Our goal is to facilitate communication, shorten the time for finding jobs and reliable workforce, and offer modern tailored solutions.</p>
+    <h2>Über die Plattform</h2>
+    <p>Die Plattform Linkwerq wird mit dem Fokus auf die Verbindung von Handwerkern und Firmen im digitalen Zeitalter entwickelt. Wir verbessern sie kontinuierlich, um sie für alle Nutzer so übersichtlich und effektiv wie möglich zu gestalten.</p>
+    <p>Unser Ziel ist es, die Kommunikation zu erleichtern, die Suche nach Arbeit und zuverlässigen Arbeitskräften zu verkürzen und maßgeschneiderte moderne Lösungen anzubieten.</p>
   </div>
 </div>
+
 <footer>
-&copy; 2025 Linkwerq. All rights reserved.
+  &copy; 2025 Linkwerq. Alle Rechte vorbehalten.
 </footer>
 </body>
 </html>
-
