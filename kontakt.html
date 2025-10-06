@@ -77,7 +77,6 @@ h1.title-header {
   text-align: center;
   font-weight: 900;
   font-size: 2.6em;
-  color: #222;
   margin: 10px 0 30px 0;
   font-family: 'Montserrat', sans-serif;
 }
@@ -93,23 +92,47 @@ h1.title-header {
 .section-box:hover {
   box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
 }
-p {
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  border: 1.5px solid #aad2fa;
+  border-radius: 12px;
+  padding: 14px 16px;
+  font-size: 1em;
+  background: #fff;
+  outline: none;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #1b79ea;
+  box-shadow: 0 0 8px #1b79ea77;
+}
+button {
+  background: #1b79ea;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
   font-size: 1.15em;
-  line-height: 1.6em;
-  margin-bottom: 16px;
+  transition: background 0.3s ease;
+  width: 100%;
 }
-footer {
-  background-color: #1b79ea;
-  color: white;
-  text-align: center;
-  padding: 16px 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9em;
-  border-radius: 0 0 20px 20px;
-  margin-top: 40px;
+button:hover {
+  background: #155ab7;
 }
-
-/* Responsive styles for mobile */
+/* Responsive */
 @media screen and (max-width: 620px) {
   header {
     padding: 12px 10px;
@@ -136,18 +159,13 @@ footer {
     padding: 20px 20px;
     margin-bottom: 30px;
   }
-  p {
-    font-size: 1em;
+  form {
+    gap: 12px;
   }
 }
 @media screen and (max-width: 400px) {
   h1.title-header {
     font-size: 1.4em;
-  }
-  .section-box {
-    border-width: 1.5px;
-    padding: 16px 16px;
-    margin-bottom: 20px;
   }
 }
 </style>
@@ -171,23 +189,23 @@ footer {
       <a href="index_de.html">Deutsch</a>
     </div>
 </header>
+
 <div class="main-wrapper">
   <h1 class="title-header">Kontaktujte nás</h1>
 
   <div class="section-box">
-    <p><strong>Web:</strong> !!!!!!!!!!!</p>
-    <p><strong>Email:</strong> !!!!!!!!!!!</p>
-    <p><strong>Telefon:</strong> !!!!!!!!!!!</p>
-  </div>
-
-  <div class="section-box">
-    <h2>O vývoji platformy</h2>
-    <p>Platforma Linkwerq je vyvíjena se zaměřením na propojení řemeslníků a firem v digitálním věku. Pravidelně ji vylepšujeme, aby byla co nejpřehlednější a nejefektivnější pro všechny uživatele.</p>
-    <p>Naším cílem je usnadnit komunikaci, zkrátit dobu hledání práce i spolehlivých pracovních sil a nabídnout moderní řešení na míru.</p>
+    <form action="https://formspree.io/f/your_form_id" method="POST">
+      <input type="text" name="name" placeholder="Jméno" required />
+      <input type="email" name="_replyto" placeholder="Email" required />
+      <textarea name="message" placeholder="Zpráva" rows="6" required></textarea>
+      <button type="submit">Odeslat</button>
+    </form>
   </div>
 </div>
+
 <footer>
   &copy; 2025 Linkwerq. Všechna práva vyhrazena.
 </footer>
 </body>
 </html>
+
