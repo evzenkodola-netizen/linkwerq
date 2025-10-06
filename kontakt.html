@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Spolupracujeme - Linkwerq</title>
+<title>Kontakt - Linkwerq</title>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600&display=swap" rel="stylesheet" />
 <style>
 body {
@@ -13,62 +13,53 @@ body {
   color: #222;
 }
 header {
+  background: transparent;
+  padding: 16px 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 16px 20px;
-  background: transparent;
+  gap: 40px;
+  flex-wrap: wrap;
+  flex-direction: row;
   color: #fff;
 }
-.header-inner {
+header > div.logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-shrink: 0;
-}
-.header-inner img {
-  width: 56px;
-  height: auto;
+  justify-content: center;
 }
 .logo {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 2em;
   letter-spacing: 1.5px;
+  margin-right: 0;
+  color: #fff;
   white-space: nowrap;
 }
 .nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  flex-grow: 1;
-  min-width: 250px;
+  gap: 20px;
+  font-size: 1em;
+  align-items: center;
 }
 .nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 400;
-  padding: 6px 10px;
-  border-radius: 8px;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
 }
-.nav a.active {
-  font-weight: 700;
+.nav a.account {
   background: #eff;
   color: #1871e6;
-}
-.nav a:hover {
-  background: rgba(255, 255, 255, 0.12);
+  border-radius: 7px;
+  padding: 4px 12px;
+  font-weight: 700;
 }
 .lang-switch {
   display: flex;
   gap: 10px;
   font-weight: 600;
-  flex-shrink: 0;
-  white-space: nowrap;
+  color: #fff;
 }
 .lang-switch a {
   color: #fff;
@@ -79,7 +70,6 @@ header {
   font-weight: 900;
   text-decoration: underline;
 }
-
 .main-wrapper {
   background: #fafafa;
   max-width: 1100px;
@@ -97,41 +87,55 @@ h1.title-header {
   margin: 10px 0 30px 0;
   font-family: 'Montserrat', sans-serif;
 }
-.partner-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  justify-content: center;
-}
-.partner-card {
-  background: #fff;
+.section-box {
   border: 2px solid #1b79ea;
-  border-radius: 14px;
-  padding: 28px 32px;
-  min-width: 260px;
-  max-width: 340px;
-  text-align: center;
-  box-shadow: 0 4px 14px rgba(27, 121, 234, 0.12);
+  background: #ffffffcc;
+  border-radius: 16px;
+  padding: 24px 28px;
   margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(27, 121, 234, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+.section-box:hover {
+  box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
+}
+form.contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 16px;
 }
-.partner-card img {
-  max-width: 120px;
-  max-height: 120px;
-  margin-bottom: 16px;
-  margin-top: 10px;
-}
-.partner-card h2 {
-  font-size: 1.4em;
-  margin: 0 0 10px 0;
-  color: #1b79ea;
-  font-weight: 900;
-}
-.partner-card p {
-  margin: 0 0 10px 0;
+.contact-form input,
+.contact-form textarea {
+  border: 1.5px solid #aad2fa;
+  border-radius: 12px;
+  padding: 14px 16px;
   font-size: 1em;
+  background: #fff;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  resize: vertical;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #1b79ea;
+  box-shadow: 0 0 8px #1b79ea77;
+}
+.contact-form button {
+  background: #1b79ea;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.15em;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+.contact-form button:hover {
+  background: #155ab7;
 }
 footer {
   background-color: #1b79ea;
@@ -143,8 +147,7 @@ footer {
   border-radius: 0 0 20px 20px;
   margin-top: 40px;
 }
-
-/* Mobilní responzivní úpravy */
+/* Responsive styles */
 @media screen and (max-width: 620px) {
   header {
     padding: 12px 10px;
@@ -166,71 +169,61 @@ footer {
   h1.title-header {
     font-size: 1.8em;
   }
-  .main-wrapper {
-    padding: 24px 7px 0 7px;
-  }
-  .partner-list {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  .partner-card {
-    margin-bottom: 22px;
-    width: 97%;
-    min-width: unset;
-    max-width: unset;
-    padding: 18px 5px;
+  .section-box {
+    padding: 20px 20px;
+    margin-bottom: 30px;
   }
 }
 @media screen and (max-width: 400px) {
   h1.title-header {
     font-size: 1.4em;
   }
-  .partner-card h2 {
-    font-size: 1.1em;
-  }
-  .partner-card p {
-    font-size: 0.96em;
-  }
 }
 </style>
 </head>
 <body>
 <header>
-  <div class="header-inner">
-    <img src="images/logo.png" alt="Logo" />
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Logo" style="width: 60px; height: auto;">
     <div class="logo">Linkwerq</div>
   </div>
   <nav class="nav">
     <a href="index.html">Domů</a>
     <a href="pro_firmy.html">Pro firmy</a>
-    <a href="spolupracujeme.html" class="active">Spolupracujeme</a>
     <a href="remeslnici.html">Pro řemeslníky</a>
-    <a href="kontakt.html">Kontakt</a>
+    <a href="spolupracujeme.html">Spolupracujeme</a>
+    <a href="kontakt.html" class="account">Kontakt</a>
   </nav>
   <div class="lang-switch">
-    <a href="index.html">Čeština</a>
+    <a href="index.html" class="active">Čeština</a>
     <span>|</span>
     <a href="index_en.html">English</a>
     <span>|</span>
     <a href="index_de.html">Deutsch</a>
   </div>
 </header>
-<div class="main-wrapper">
-  <h1 class="title-header">Spolupracujeme & podpora</h1>
 
-  <div class="partner-list">
-    <div class="partner-card">
-      <img src="aspora.png" alt="Logo Aspora s.r.o." />
-      <h2>Aspora s.r.o.</h2>
-      <p><a href="https://aspora.building" target="_blank">aspora.building</a></p>
-      <p>Stavební a montážní společnost podporující naše projekty a propojení řemeslníků s kvalitními stavbami v Německu.</p>
-    </div>
+<div class="main-wrapper">
+  <h1 class="title-header">Kontaktujte nás</h1>
+
+  <div class="section-box">
+    <form action="https://formspree.io/f/your_form_id" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Jméno" required />
+      <input type="email" name="_replyto" placeholder="Email" required />
+      <textarea name="message" placeholder="Zpráva" rows="6" required></textarea>
+      <button type="submit">Odeslat</button>
+    </form>
+  </div>
+
+  <div class="section-box">
+    <h2>O vývoji platformy</h2>
+    <p>Platforma Linkwerq je vyvíjena se zaměřením na propojení řemeslníků a firem v digitálním věku. Pravidelně ji vylepšujeme, aby byla co nejpřehlednější a nejefektivnější pro všechny uživatele.</p>
+    <p>Naším cílem je usnadnit komunikaci, zkrátit dobu hledání práce i spolehlivých pracovních sil a nabídnout moderní řešení na míru.</p>
   </div>
 </div>
+
 <footer>
   &copy; 2025 Linkwerq. Všechna práva vyhrazena.
 </footer>
 </body>
 </html>
-

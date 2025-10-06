@@ -23,17 +23,19 @@ header {
   flex-direction: row;
   color: #fff;
 }
-header > .header-inner {
+header > div.logo-container {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-content: center;
 }
 .logo {
-  color: #fff;
   font-weight: 900;
   font-size: 2em;
   letter-spacing: 1.5px;
   margin-right: 0;
+  color: #fff;
+  white-space: nowrap;
 }
 .nav {
   display: flex;
@@ -82,7 +84,6 @@ h1.title-header {
   text-align: center;
   font-weight: 900;
   font-size: 2.6em;
-  color: #222;
   margin: 10px 0 30px 0;
   font-family: 'Montserrat', sans-serif;
 }
@@ -94,41 +95,17 @@ h1.title-header .highlight {
   background: #ffffffcc;
   border-radius: 16px;
   padding: 24px 28px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   box-shadow: 0 8px 20px rgba(27, 121, 234, 0.15);
   transition: box-shadow 0.3s ease;
 }
 .section-box:hover {
   box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
 }
-h2 {
-  margin-bottom: 14px;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.8em;
-}
-h2 svg {
-  width: 28px;
-  height: 28px;
-  fill: #1b79ea;
-}
 p {
   font-size: 1.15em;
   line-height: 1.6em;
   margin-bottom: 16px;
-}
-.icon-circle {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 2px solid #1b79ea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 footer {
   background-color: #1b79ea;
@@ -140,73 +117,59 @@ footer {
   border-radius: 0 0 20px 20px;
   margin-top: 40px;
 }
-/* Optimalizace pro mobilní zařízení */
-@media screen and (max-width: 800px) {
-  .main-wrapper {
-    padding: 22px 5vw 4px 5vw;
-  }
-}
+
+/* Responsive */
 @media screen and (max-width: 620px) {
   header {
+    padding: 12px 10px;
+    gap: 20px;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 12px 10px;
-    gap: 12px;
-  }
-  header > .header-inner {
-    justify-content: center;
   }
   .logo {
-    font-size: 1.4em;
+    font-size: 1.6em;
     margin-right: 0;
   }
   .nav {
     gap: 10px;
-    font-size: 0.96em;
+    font-size: 0.9em;
     flex-wrap: wrap;
     justify-content: center;
   }
   h1.title-header {
-    font-size: 1.5em;
-    margin-bottom: 17px;
+    font-size: 1.8em;
   }
   .section-box {
-    padding: 15px 10px;
-    margin-bottom: 36px;
-  }
-  h2 {
-    font-size: 1.08em;
-    gap: 6px;
+    padding: 20px 20px;
+    margin-bottom: 30px;
   }
   p {
-    font-size: 0.99em;
+    font-size: 1em;
   }
 }
 @media screen and (max-width: 400px) {
   h1.title-header {
-    font-size: 1.17em;
-  }
-  h2 {
-    font-size: 1em;
-    gap: 4px;
+    font-size: 1.4em;
   }
 }
 </style>
 </head>
 <body>
 <header>
-  <div class="header-inner">
-    <img src="images/logo.png" alt="Logo" style="width: 56px; height: auto;">
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Logo" style="width: 60px; height: auto;">
     <div class="logo">Linkwerq</div>
   </div>
   <nav class="nav">
     <a href="index.html">Domů</a>
     <a href="pro_firmy.html">Pro firmy</a>
+<a href="remeslnici.html" class="account">Pro řemeslníky</a>
     <a href="spolupracujeme.html">Spolupracujeme</a>
-    <a href="kontakt.html" class="account">Kontakt</a>
+    <a href="kontakt.html">Kontakt</a>
   </nav>
   <div class="lang-switch">
-    <a href="index.html" class="active">Čeština</a>
+    <a href="index.html">Čeština</a>
     <span>|</span>
     <a href="index_en.html">English</a>
     <span>|</span>
@@ -217,25 +180,19 @@ footer {
   <h1 class="title-header">Pro řemeslníky – najděte <span class="highlight">dobře placenou práci</span> a dlouhodobé zakázky</h1>
 
   <div class="section-box">
-    <h2><span class="icon-circle" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><path d="M22 42h20v4H22zM42 20v10l10 6v-4l-6-4v-8zM12 28v-6h28v6z"/></svg>
-    </span> Najděte dobře placenou práci v Německu</h2>
+    <h2>Najděte dobře placenou práci v Německu</h2>
     <p>Jako řemeslník máte jedinečnou příležitost získat stabilní a dobře ohodnocenou práci přímo pod německou nebo ověřenou firmou. Naše platforma vám pomůže najít zakázky i dlouhodobé projekty napříč Německem s férovými platovými podmínkami a zajištěným ubytováním.</p>
     <p>Pracujte v profesionálním prostředí, rozvíjejte své dovednosti a zabezpečte si stabilní příjem v zahraničí díky ověřeným partnerům, kteří za vámi stojí.</p>
     <p>Kontaktujte nás a začněte svou novou kariéru ještě dnes!</p>
   </div>
 
   <div class="section-box">
-    <h2><span class="icon-circle" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><circle cx="32" cy="32" r="30" stroke="#0077cc" stroke-width="4" fill="none"/><line x1="32" y1="32" x2="32" y2="16" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/><line x1="32" y1="32" x2="44" y2="44" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/></svg>
-    </span> Snadný přístup k ověřeným zakázkám</h2>
+    <h2>Snadný přístup k ověřeným zakázkám</h2>
     <p>Zapomeňte na zdlouhavé hledání práce – s Linkwerq získáte okamžitý přístup k ověřeným a důvěryhodným firmám v Německu, které hledají kvalifikované řemeslníky jako jste vy.</p>
   </div>
 
   <div class="section-box">
-    <h2><span class="icon-circle" aria-hidden="true">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc"><circle cx="32" cy="32" r="12" fill="#0077cc"/><path d="M32 20v24" stroke="#fff" stroke-width="4"/><path d="M20 32h24" stroke="#fff" stroke-width="4"/></svg>
-    </span> Podpora a poradenství</h2>
+    <h2>Podpora a poradenství</h2>
     <p>Poskytujeme asistenci při komunikaci s německými firmami a pomáháme s administrativou, abyste se mohli soustředit na svou práci a její kvalitu.</p>
   </div>
 </div>
