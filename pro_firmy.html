@@ -9,7 +9,7 @@
 body {
   margin: 0;
   background: #1b79ea;
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   color: #222;
 }
 header {
@@ -75,8 +75,6 @@ header > div.logo-container {
   max-width: 1100px;
   margin: 24px auto 0;
   padding: 40px 36px 40px;
-  font-family: 'Open Sans', sans-serif;
-  color: #222;
 }
 
 /* Hlavní kontejner bílé pozadí */
@@ -87,56 +85,57 @@ header > div.logo-container {
   padding: 48px 42px 48px;
 }
 
-/* Titulní nadpis */
+/* Titulní nadpis - černý text s žlutým zvýrazněním a Montserrat */
 h1.title-header {
   text-align: center;
   font-weight: 900;
   font-size: 2.8em;
   margin: 0 0 38px 0;
   font-family: 'Montserrat', sans-serif;
-  color: #1b79ea;
+  color: #222;
 }
 h1.title-header .highlight {
   color: #f4c542;
 }
 
-/* Upravená Navigace sekcí s blokem */
+/* Upravená Navigace sekcí s blokem a zútulněním tlačítek */
 .quick-links {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 28px;
   margin-bottom: 52px;
   flex-wrap: wrap;
   background: #ffffffee;
   padding: 18px 36px;
-  border-radius: 24px;
-  box-shadow: 0 8px 22px rgba(27, 121, 234, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 8px 22px rgba(27, 121, 234, 0.22);
   font-weight: 800;
-  font-size: 1.3em;
+  font-size: 1.25em;
   letter-spacing: 0.06em;
-  user-select: none;
 }
-
 .quick-links a {
-  text-decoration: underline;
-  font-weight: 800;
-  padding: 0;
-  margin: 0 20px;
-  color: #1b79ea;
-  transition: color 0.3s ease;
+  border-radius: 20px;
+  background: #1b79ea;
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(27, 121, 234, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .quick-links a:hover,
 .quick-links a:focus-visible {
-  color: #f4c542;
+  background-color: #f4c542;
+  color: #1b79ea;
+  box-shadow: 0 10px 25px rgba(244, 197, 66, 0.8);
+  outline: none;
   text-decoration: none;
-  cursor: pointer;
 }
 
 /* Sekce s decentními bloky */
 .section-box {
   border-radius: 20px;
-  padding: 30px 36px;
-  margin-bottom: 48px;
+  padding: 36px 42px;
+  margin-bottom: 50px;
   background: #ffffffcc;
   box-shadow: 0 8px 24px rgba(27, 121, 234, 0.18);
   transition: box-shadow 0.3s ease;
@@ -149,9 +148,9 @@ h1.title-header .highlight {
 .section-box h2 {
   font-size: 2.4em;
   font-weight: 900;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   position: relative;
-  padding-left: 26px;
+  padding-left: 28px;
   color: #104e91;
   font-family: 'Montserrat', sans-serif;
 }
@@ -160,10 +159,10 @@ h1.title-header .highlight {
   position: absolute;
   left: 0;
   top: 2px;
-  width: 12px;
+  width: 14px;
   height: 100%;
   background: #f4c542;
-  border-radius: 6px;
+  border-radius: 7px;
 }
 .section-box p {
   font-size: 1.22em;
@@ -213,26 +212,32 @@ h1.title-header .highlight {
   font-style: italic;
 }
 
-/* Tlačítko profil */
+/* Modernější tlačítka registrace/přihlášení */
 .btn-profile {
-  padding: 11px 24px;
+  padding: 14px 30px;
+  font-size: 1.1em;
   background-color: #1b79ea;
   color: #fff;
   font-weight: 700;
   border: none;
-  border-radius: 14px;
+  border-radius: 26px;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 8px 22px rgba(27, 121, 234, 0.35);
   transition: background-color 0.3s ease, box-shadow 0.25s ease;
-  box-shadow: 0 7px 16px rgba(27, 121, 234, 0.35);
+  text-align: center;
+  display: inline-block;
+  min-width: 180px;
+  user-select: none;
 }
-.btn-profile:hover, .btn-profile:focus {
+.btn-profile:hover, .btn-profile:focus-visible {
   background-color: #f4c542 !important;
   color: #1b79ea !important;
-  box-shadow: 0 12px 26px rgba(244, 197, 66, 0.8);
+  box-shadow: 0 12px 32px rgba(244, 197, 66, 0.85);
+  outline: none;
 }
 
-/* Kombinované sekce vedle sebe */
+/* Uprava rozlozeni vedle sebe */
 .combined-section {
   display: flex;
   gap: 46px;
@@ -245,7 +250,7 @@ h1.title-header .highlight {
   min-width: 340px;
 }
 
-/* Mobilní responzivita */
+/* Mobilni responzivita */
 @media screen and (max-width: 880px) {
   .combined-section {
     flex-direction: column;
@@ -303,6 +308,7 @@ h1.title-header .highlight {
   }
   .btn-profile {
     width: 100%;
+    min-width: unset;
   }
   .quick-links {
     font-size: 1.18em;
@@ -310,7 +316,8 @@ h1.title-header .highlight {
   }
   .quick-links a {
     margin: 0 14px;
-    padding: 0;
+    padding: 12px 20px;
+    border-radius: 22px;
   }
 }
 @media screen and (max-width: 410px) {
@@ -319,7 +326,7 @@ h1.title-header .highlight {
   }
   h2 {
     font-size: 1.3em;
-    padding-left: 14px;
+    padding-left: 16px;
   }
 }
 </style>
@@ -369,8 +376,8 @@ h1.title-header .highlight {
       </h2>
       <p>Založte si účet, díky kterému získáte kompletní přístup k ověřeným řemeslníkům, jejich referencím i správě objednávek. Registrace a přihlášení jsou rychlé, bezpečné a jednoduché, abyste se mohli plně soustředit na vaše projekty.</p>
       <div style="display:flex; gap:20px; flex-wrap: wrap;">
-        <a href="#" class="btn-profile" style="max-width: 180px; flex:1;">Registrace firmy</a>
-        <a href="#" class="btn-profile" style="max-width: 180px; flex:1; background:#f4c542; color:#1b79ea;">Přihlášení firmy</a>
+        <a href="#" class="btn-profile">Registrace firmy</a>
+        <a href="#" class="btn-profile" style="background:#f4c542; color:#1b79ea;">Přihlášení firmy</a>
       </div>
     </section>
 
@@ -413,12 +420,10 @@ h1.title-header .highlight {
         <button class="btn-profile" style="margin-top: 16px;">Zobrazit profil</button>
       </div>
     </section>
-  </div>
 </div>
-
+</div>
 <footer>
   &copy; 2025 Linkwerq. Všechna práva vyhrazena.
 </footer>
 </body>
 </html>
-
