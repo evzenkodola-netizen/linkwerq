@@ -70,79 +70,188 @@ header > div.logo-container {
   font-weight: 900;
   text-decoration: underline;
 }
+
 .main-wrapper {
-  background: #fafafa;
   max-width: 1100px;
   margin: 24px auto 0;
-  border-radius: 20px;
-  box-shadow: 0 2px 16px #1b79ea40;
-  padding: 40px 36px 8px;
+  padding: 40px 36px 40px;
   font-family: 'Open Sans', sans-serif;
   color: #222;
 }
+
+/* Hlavní kontejner bílé pozadí */
+.content-container {
+  background: #fafafa;
+  border-radius: 20px;
+  box-shadow: 0 6px 30px rgba(27, 121, 234, 0.3);
+  padding: 48px 42px 48px;
+}
+
+/* Titulní nadpis */
 h1.title-header {
   text-align: center;
   font-weight: 900;
-  font-size: 2.6em;
-  margin: 10px 0 30px 0;
+  font-size: 2.8em;
+  margin: 0 0 38px 0;
   font-family: 'Montserrat', sans-serif;
+  color: #1b79ea;
 }
 h1.title-header .highlight {
   color: #f4c542;
 }
-.section-box {
-  border: 2px solid #1b79ea;
-  background: #ffffffcc;
-  border-radius: 16px;
-  padding: 24px 28px;
-  margin-bottom: 40px;
-  box-shadow: 0 8px 20px rgba(27, 121, 234, 0.15);
-  transition: box-shadow 0.3s ease;
-}
-.section-box:hover {
-  box-shadow: 0 12px 30px rgba(27, 121, 234, 0.3);
-}
-h2 {
-  margin-bottom: 14px;
-  font-weight: 900;
+
+/* Upravená Navigace sekcí s blokem */
+.quick-links {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.8em;
-}
-h2 svg {
-  width: 28px;
-  height: 28px;
-  fill: #1b79ea;
-}
-p {
-  font-size: 1.15em;
-  line-height: 1.6em;
-  margin-bottom: 16px;
-}
-.icon-circle {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 2px solid #1b79ea;
-  display: flex;
-  align-items: center;
   justify-content: center;
-}
-footer {
-  background-color: #1b79ea;
-  color: white;
-  text-align: center;
-  padding: 16px 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 0.9em;
-  border-radius: 0 0 20px 20px;
-  margin-top: 40px;
+  gap: 30px;
+  margin-bottom: 52px;
+  flex-wrap: wrap;
+  background: #ffffffee;
+  padding: 18px 36px;
+  border-radius: 24px;
+  box-shadow: 0 8px 22px rgba(27, 121, 234, 0.2);
+  font-weight: 800;
+  font-size: 1.3em;
+  letter-spacing: 0.06em;
+  user-select: none;
 }
 
-/* Responzivní */
+.quick-links a {
+  text-decoration: underline;
+  font-weight: 800;
+  padding: 0;
+  margin: 0 20px;
+  color: #1b79ea;
+  transition: color 0.3s ease;
+}
+.quick-links a:hover,
+.quick-links a:focus-visible {
+  color: #f4c542;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Sekce s decentními bloky */
+.section-box {
+  border-radius: 20px;
+  padding: 30px 36px;
+  margin-bottom: 48px;
+  background: #ffffffcc;
+  box-shadow: 0 8px 24px rgba(27, 121, 234, 0.18);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+.section-box:hover,
+.section-box:focus-within {
+  box-shadow: 0 14px 38px rgba(27, 121, 234, 0.28);
+}
+.section-box h2 {
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 28px;
+  position: relative;
+  padding-left: 26px;
+  color: #104e91;
+  font-family: 'Montserrat', sans-serif;
+}
+.section-box h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 12px;
+  height: 100%;
+  background: #f4c542;
+  border-radius: 6px;
+}
+.section-box p {
+  font-size: 1.22em;
+  line-height: 1.92em;
+  color: #2b2b2b;
+  margin-bottom: 30px;
+}
+.section-box p:first-of-type {
+  font-weight: 700;
+  color: #104e91;
+}
+
+/* Profil řemeslníka */
+.profile-ex {
+  display: flex;
+  gap: 34px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.profile-ex img {
+  width: 98px;
+  height: 98px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3.5px solid #f4c542;
+  box-shadow: 0 3px 16px #1b79ea55;
+  flex-shrink: 0;
+}
+.profile-info {
+  flex: 1;
+  min-width: 280px;
+}
+.profile-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #1b79ea;
+}
+.profile-info .details {
+  font-size: 1.06em;
+  color: #555;
+  margin-bottom: 18px;
+}
+.profile-info em {
+  color: #666;
+  font-style: italic;
+}
+
+/* Tlačítko profil */
+.btn-profile {
+  padding: 11px 24px;
+  background-color: #1b79ea;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, box-shadow 0.25s ease;
+  box-shadow: 0 7px 16px rgba(27, 121, 234, 0.35);
+}
+.btn-profile:hover, .btn-profile:focus {
+  background-color: #f4c542 !important;
+  color: #1b79ea !important;
+  box-shadow: 0 12px 26px rgba(244, 197, 66, 0.8);
+}
+
+/* Kombinované sekce vedle sebe */
+.combined-section {
+  display: flex;
+  gap: 46px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 52px;
+}
+.combined-section > div {
+  flex: 1 1 440px;
+  min-width: 340px;
+}
+
+/* Mobilní responzivita */
+@media screen and (max-width: 880px) {
+  .combined-section {
+    flex-direction: column;
+    gap: 36px;
+  }
+}
 @media screen and (max-width: 620px) {
   header {
     padding: 12px 10px;
@@ -162,27 +271,55 @@ footer {
     justify-content: center;
   }
   h1.title-header {
-    font-size: 1.8em;
-  }
-  .section-box {
-    padding: 20px 20px;
+    font-size: 2.1em;
     margin-bottom: 30px;
   }
+  .main-wrapper {
+    padding: 30px 22px 42px;
+  }
+  .section-box {
+    padding: 28px 28px;
+    margin-bottom: 36px;
+  }
   h2 {
-    font-size: 1.4em;
-    gap: 8px;
+    font-size: 1.6em;
+    padding-left: 20px;
   }
   p {
-    font-size: 1em;
+    font-size: 1.1em;
+  }
+  .profile-ex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-ex img {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 14px;
+  }
+  .profile-info {
+    min-width: auto;
+    text-align: center;
+  }
+  .btn-profile {
+    width: 100%;
+  }
+  .quick-links {
+    font-size: 1.18em;
+    padding: 20px 24px;
+  }
+  .quick-links a {
+    margin: 0 14px;
+    padding: 0;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 410px) {
   h1.title-header {
-    font-size: 1.4em;
+    font-size: 1.75em;
   }
   h2 {
-    font-size: 1.2em;
-    gap: 6px;
+    font-size: 1.3em;
+    padding-left: 14px;
   }
 }
 </style>
@@ -193,14 +330,14 @@ footer {
     <img src="images/logo.png" alt="Logo" style="width: 60px; height: auto;">
     <div class="logo">Linkwerq</div>
   </div>
-  <nav class="nav">
+  <nav class="nav" aria-label="Hlavní navigace">
     <a href="index.html">Domů</a>
-    <a href="pro_firmy.html" class="account">Pro firmy</a>
+    <a href="pro_firmy.html" class="account" aria-current="page">Pro firmy</a>
     <a href="remeslnici.html">Pro řemeslníky</a>
     <a href="spolupracujeme.html">Spolupracujeme</a>
     <a href="kontakt.html">Kontakt</a>
   </nav>
-  <div class="lang-switch">
+  <div class="lang-switch" aria-label="Přepnutí jazyka">
     <a href="index.html">Čeština</a>
     <span>|</span>
     <a href="index_en.html">English</a>
@@ -208,51 +345,80 @@ footer {
     <a href="index_de.html">Deutsch</a>
   </div>
 </header>
+
 <div class="main-wrapper">
-  <h1 class="title-header">Pro firmy – najděte <span class="highlight">kvalitní řemeslníky</span> a šikovné ručičky</h1>
+  <div class="content-container">
+    <h1 class="title-header">Pro firmy – najděte <span class="highlight">kvalitní řemeslníky</span> a šikovné ručičky</h1>
 
-  <div class="section-box">
-    <h2>
-      <span class="icon-circle" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc">
-          <path d="M43.259 20.74l-6-6A4 4 0 0036 17v10a4 4 0 00.732 2.124l-6.342 6.342A6 6 0 0028 34v4a4 4 0 006.338 3.262l6-6A4 4 0 0036 33v-10a4 4 0 00-1.74-3.26l-6 6A4 4 0 0028 26v4a4 4 0 006.338 3.262l6-6A4 4 0 0036 19V9a4 4 0 00-4-4h-8a4 4 0 00-4 4v10a4 4 0 001.74 3.26l6-6A4 4 0 0036 22v10a4 4 0 01-4 4h-8a4 4 0 01-4-4V22a4 4 0 014-4h8a4 4 0 014 4v10a4 4 0 01-4 4h-8a4 4 0 01-4-4v-2a6 6 0 016-6h8v-4h-8a6 6 0 00-6 6v2a6 6 0 006 6h8v4h-8a6 6 0 01-6-6V14a4 4 0 014-4h8a4 4 0 014 4v10z"/>
-        </svg>
-      </span>
-      Snadné a spolehlivé propojení
-    </h2>
-    <p>Linkwerq je moderní platforma, která firmám umožňuje rychle a efektivně najít zkušené a ověřené řemeslníky i šikovné pracovníky, kteří zvládnou vaše projekty s precizností a profesionalitou.</p>
-  </div>
+    <nav class="quick-links" aria-label="Rychlá navigace sekcí pro firmy">
+      <a href="#registrace">Registrace</a>
+      <a href="#ukazka-firmam">Ukázka pro firmy</a>
+      <a href="#ukazka-profilu">Profil řemeslníka</a>
+    </nav>
 
-  <div class="section-box">
-    <h2>
-      <span class="icon-circle" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc">
-          <circle cx="32" cy="32" r="30" stroke="#0077cc" stroke-width="4" fill="none"/>
-          <line x1="32" y1="32" x2="32" y2="16" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/>
-          <line x1="32" y1="32" x2="44" y2="44" stroke="#0077cc" stroke-width="4" stroke-linecap="round"/>
-        </svg>
-      </span>
-      Šetřete čas i námahu
-    </h2>
-    <p>Zapomeňte na zdlouhavé vyhledávání nebo nejasné reference. S Linkwerq získáte okamžitý přístup k odborníkům připraveným pomoci s projekty všech rozsahů — od drobných oprav až po komplexní zakázky.</p>
-  </div>
+    <section class="section-box" id="registrace" tabindex="0">
+      <h2>
+        <span class="icon-circle" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="26" height="26" fill="#0077cc">
+            <rect x="8" y="16" width="48" height="32" rx="6" ry="6"/>
+            <path fill="#fff" d="M32 22a8 8 0 100 16 8 8 0 000-16z"/>
+            <path d="M26 40h12v6H26z" fill="#fff"/>
+          </svg>
+        </span>
+        Registrace a přihlášení pro firmy
+      </h2>
+      <p>Založte si účet, díky kterému získáte kompletní přístup k ověřeným řemeslníkům, jejich referencím i správě objednávek. Registrace a přihlášení jsou rychlé, bezpečné a jednoduché, abyste se mohli plně soustředit na vaše projekty.</p>
+      <div style="display:flex; gap:20px; flex-wrap: wrap;">
+        <a href="#" class="btn-profile" style="max-width: 180px; flex:1;">Registrace firmy</a>
+        <a href="#" class="btn-profile" style="max-width: 180px; flex:1; background:#f4c542; color:#1b79ea;">Přihlášení firmy</a>
+      </div>
+    </section>
 
-  <div class="section-box">
-    <h2>
-      <span class="icon-circle" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="20" height="20" fill="#0077cc">
-          <circle cx="32" cy="32" r="12" fill="#0077cc"/>
-          <path d="M32 20v24" stroke="#fff" stroke-width="4"/>
-          <path d="M20 32h24" stroke="#fff" stroke-width="4"/>
-        </svg>
-      </span>
-      Propojení, které funguje
-    </h2>
-    <p>Užijte si jednoduché a komfortní prostředí, kde pohodlně vybíráte, komunikujete a domlouváte zakázky bez zbytečných komplikací.</p>
+    <section class="combined-section" id="ukazka-firmam" tabindex="0">
+      <div class="section-box" style="flex:1;">
+        <h2>
+          <span class="icon-circle" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="26" height="26" fill="#0077cc">
+              <path d="M32 8a24 24 0 1024 24A24 24 0 0032 8zM32 44a12 12 0 1112-12 12 12 0 01-12 12z"/>
+            </svg>
+          </span>
+          Jak to funguje pro firmy
+        </h2>
+        <p>Linkwerq není obyčejný online portál. S každým řemeslníkem se osobně potkáváme, ověřujeme jeho schopnosti a spolehlivost. Díky tomu u nás najdete jen ověřené a důvěryhodné odborníky, kteří splní vaše očekávání.</p>
+        <p>Pomáháme firmám rychle najít kvalifikované řemeslníky, ušetřit čas při výběru a zajistit hladký průběh realizace zakázek. Využijte pohodlné prostředí s přehlednými profily a reálnými referencemi.</p>
+      </div>
+      <div class="section-box" style="flex:1;">
+        <h2>Výhody pro firmy</h2>
+        <ul style="font-size:1.1em; line-height:1.6em; color:#333;">
+          <li>Ověření řemeslníci s fyzickým ověřením</li>
+          <li>Snadný a rychlý přístup k ověřeným profilům</li>
+          <li>Transparentní reference a hodnocení</li>
+          <li>Komfortní správa poptávek a komunikace</li>
+          <li>Podpora při výběru řemeslníků na míru projektům</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section-box profile-ex" id="ukazka-profilu" tabindex="0">
+      <img src="jannovak.png" alt="Profil řemeslníka Jan Novák" />
+      <div class="profile-info">
+        <h3>Jan Novák – elektrikář</h3>
+        <div class="details"><strong>Ověřený řemeslník</strong> • 15 let praxe • <span style="color:#f4c542;font-weight:700;">★4.9</span> (38 hodnocení)</div>
+        <div>
+          Realizace: bytové a průmyslové elektroinstalace, chytré domy<br>
+          Certifikace: Elektromontér §8, TÜV Nord<br>
+          <em>„Rychlá domluva, precizní práce, perfektní výsledek.“</em><br>
+          S panem Novákem máme osobní zkušenost a pravidelně s ním spolupracujeme na různých projektech.
+        </div>
+        <button class="btn-profile" style="margin-top: 16px;">Zobrazit profil</button>
+      </div>
+    </section>
   </div>
 </div>
+
 <footer>
   &copy; 2025 Linkwerq. Všechna práva vyhrazena.
 </footer>
 </body>
 </html>
+
