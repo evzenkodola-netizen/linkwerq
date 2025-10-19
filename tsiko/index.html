@@ -48,17 +48,52 @@ header {
   height: 90px;
   width: auto;
   display: block;
+  margin-bottom: 0;
 }
 nav {
   display: flex;
   gap: 22px;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   letter-spacing: 1.2px;
+}
+nav a {
+  padding: 8px 10px;
+  border-radius: 7px;
+  transition: background 0.2s;
 }
 nav a:hover {
   color: var(--c-red);
+  background: var(--c-lightbg);
+}
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 4px;
+    gap: 3px;
+  }
+  .logo img {
+    margin-bottom: 8px;
+    max-width: 60vw;
+    height: 46px;
+  }
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  nav a {
+    min-width: 65px;
+    padding: 8px 5px;
+    margin-bottom: 3px;
+  }
 }
 /* Hero Banner */
 .hero {
@@ -77,13 +112,13 @@ nav a:hover {
   box-shadow: 0 6px 14px rgba(0,0,0,0.3);
 }
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 12px;
   text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 20px;
   max-width: 720px;
@@ -108,7 +143,7 @@ section {
   background: var(--c-white);
   max-width: 1080px;
   margin: 32px auto;
-  padding: 36px 28px;
+  padding: 36px 16px;
   border-radius: 10px;
   box-shadow: 0 6px 24px rgba(34,36,42,0.07);
   color: var(--c-dark);
@@ -122,7 +157,6 @@ h2 {
   color: var(--c-dark);
   text-align: center;
 }
-/* Jemné boxy pro služby & výhody */
 .services, .benefits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -284,13 +318,7 @@ footer {
   }
 }
 @media (max-width: 780px) {
-  nav {
-    font-size: 0.85rem;
-    gap: 12px;
-  }
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+  .hero h1 { font-size: 2rem; }
   .gallery {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -303,16 +331,17 @@ footer {
     grid-template-columns: 1fr;
     gap: 18px;
   }
-  .header-inner { flex-wrap: wrap; gap: 12px; padding: 12px 16px;}
+  .header-inner { flex-wrap: wrap; gap: 12px; }
   nav { flex-grow: 1; justify-content: center; }
-  .logo img { height: 70px; }
+  .logo img { height: 60px; }
 }
 @media (max-width: 420px) {
-  .hero h1 { font-size: 1.6rem;}
+  .hero h1 { font-size: 1.3rem;}
   form { padding: 0; }
-  .logo img { height: 58px; }
-  section { padding: 22px 7px; }
-  .about, .contact-section { padding: 22px 7px;}
+  .logo img { height: 42px; }
+  section { padding: 18px 4px; }
+  .about, .contact-section { padding: 18px 4px;}
+  nav { font-size: 0.93rem;}
 }
 </style>
 </head>
@@ -385,23 +414,23 @@ footer {
   <h2>Reference</h2>
   <div class="gallery">
     <div class="gallery-item">
-      <img src="dum1.png" alt="Rodinný dům, Pardubice 2025" />
+      <img src="images/dum1.png" alt="Rodinný dům, Pardubice 2025" />
       <p>Rodinný dům, Pardubice 2025</p>
     </div>
     <div class="gallery-item">
-      <img src="strecha.png" alt="Rekonstrukce střechy, Kolín 2025" />
+      <img src="images/strecha.png" alt="Rekonstrukce střechy, Kolín 2025" />
       <p>Rekonstrukce střechy, Kolín 2025</p>
     </div>
     <div class="gallery-item">
-      <img src="dum2.png" alt="Bytový dům, Chrudim 2024" />
+      <img src="images/dum2.png" alt="Bytový dům, Chrudim 2024" />
       <p>Bytový dům, Chrudim 2024</p>
     </div>
     <div class="gallery-item">
-      <img src="strecha.png" alt="Modernizace fasády, Hradec Králové 2023" />
+      <img src="images/strecha.png" alt="Modernizace fasády, Hradec Králové 2023" />
       <p>Modernizace fasády, Hradec Králové 2023</p>
     </div>
     <div class="gallery-item">
-      <img src="bagry.png" alt="Památková rekonstrukce, Pardubice 2022" />
+      <img src="images/bagry.png" alt="Památková rekonstrukce, Pardubice 2022" />
       <p>Památková rekonstrukce, Pardubice 2022</p>
     </div>
   </div>
@@ -412,7 +441,6 @@ footer {
     <h2>O firmě</h2>
     <p>TSIKO STAV s.r.o. je zkušená stavební firma z Pardubic. Specializujeme se na realizace střech, hrubé stavby a památkové rekonstrukce. Dbáme na kvalitu, spolehlivost a osobní přístup ke každému klientovi.</p>
   </section>
-
   <section id="contact" class="contact-section">
     <h2>Kontaktujte nás</h2>
     <form>
@@ -436,3 +464,4 @@ footer {
 </footer>
 </body>
 </html>
+
