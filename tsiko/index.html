@@ -49,16 +49,14 @@ header {
   width: auto;
   display: block;
   margin-bottom: 0;
-  max-width: 220px;
 }
 nav {
   display: flex;
-  gap: 30px;
+  gap: 22px;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   letter-spacing: 1.2px;
-  justify-content: center;
 }
 nav a {
   padding: 8px 10px;
@@ -68,6 +66,34 @@ nav a {
 nav a:hover {
   color: var(--c-red);
   background: var(--c-lightbg);
+}
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 4px;
+    gap: 3px;
+  }
+  .logo img {
+    margin-bottom: 8px;
+    max-width: 60vw;
+    height: 46px;
+  }
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  nav a {
+    min-width: 65px;
+    padding: 8px 5px;
+    margin-bottom: 3px;
+  }
 }
 /* Hero Banner */
 .hero {
@@ -226,13 +252,12 @@ h2 {
 .contact-section form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 input, textarea {
   width: 100%;
   font-size: 1rem;
   padding: 14px 18px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   border: 2px solid var(--c-grey);
   border-radius: 6px;
   font-family: inherit;
@@ -259,29 +284,21 @@ button[type="submit"]:hover {
   background: #b8251a;
 }
 .contact-info-box {
-  margin-top: 16px;
+  margin-top: 36px;
   font-weight: 600;
   color: #555;
-  font-size: 1.13rem;
+  font-size: 1rem;
   user-select: none;
-  background: var(--c-white);
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(34,36,42,0.05);
-  padding: 18px 8px;
 }
 .contact-info-box p {
-  margin-bottom: 14px;
-  word-break: break-word;
-  display: block;
-  text-align: left;
+  margin-bottom: 10px;
 }
 .contact-info-box span {
-  color: var(--c-red);
   font-weight: 700;
-  display: inline;
-  min-width: 73px;
+  color: var(--c-red);
+  display: inline-block;
+  width: 120px;
 }
-.contact-info-box a { color: var(--c-dark); }
 /* Footer */
 footer {
   background: var(--c-dark);
@@ -316,61 +333,15 @@ footer {
   }
   .header-inner { flex-wrap: wrap; gap: 12px; }
   nav { flex-grow: 1; justify-content: center; }
-  .logo img { height: 74px; max-width: 88vw;}
-}
-@media (max-width: 600px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: center;
-    padding: 12px 4px;
-    gap: 3px;
-  }
-  .logo img {
-    height: 76px!important;
-    max-width: 95vw;
-    margin-bottom: 7px;
-  }
-  nav {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: 100vw;
-    gap: 11vw;
-    font-size: 1.17rem;
-    margin-bottom: 0;
-    padding-bottom: 6px;
-  }
-  nav a {
-    min-width: 17vw;
-    text-align: center;
-    padding: 7px 2px;
-    font-size: 1.09rem;
-  }
-  .contact-section {
-    padding: 18px 6px !important;
-    box-sizing: border-box;
-  }
-  .contact-info-box {
-    padding: 16px 8px 8px 8px;
-    font-size: 1.14rem;
-    margin-top: 8px;
-  }
-  .contact-info-box p {
-    margin-bottom: 14px;
-    word-break: break-all;
-    display: block;
-  }
-  form {
-    box-sizing: border-box;
-    padding: 0 !important;
-    margin-bottom: 6px;
-  }
+  .logo img { height: 60px; }
 }
 @media (max-width: 420px) {
-  .hero h1 { font-size: 1.25rem;}
-  section { padding: 14px 2px; }
-  .about, .contact-section { padding: 12px 2px;}
-  nav { font-size: 1.02rem;}
+  .hero h1 { font-size: 1.3rem;}
+  form { padding: 0; }
+  .logo img { height: 42px; }
+  section { padding: 18px 4px; }
+  .about, .contact-section { padding: 18px 4px;}
+  nav { font-size: 0.93rem;}
 }
 </style>
 </head>
