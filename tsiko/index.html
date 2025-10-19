@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TSIKO STAV s.r.o. - Kvalitní stavební práce</title>
+<style>
+  :root {
+    --c-dark: #22242a;
+    --c-red: #e53a27;
+    --c-lightbg: #f7f7f9;
+    --c-white: #fff;
+    --c-grey: #e0e2e7;
+    --c-box: #fbfbfc;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--c-lightbg);
+    color: var(--c-dark);
+    line-height: 1.6;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  /* Header */
+  header {
+    background: var(--c-white);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .logo img {
+    height: 90px;
+    width: auto;
+    display: block;
+  }
+  nav {
+    display: flex;
+    gap: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1.2px;
+  }
+  nav a:hover {
+    color: var(--c-red);
+  }
+  /* Hero Banner */
+  .hero {
+    max-width: 1080px;
+    margin: 32px auto 0;
+    background: linear-gradient(135deg, #22242ad0 0%, #e53a27cc 100%), url('hero-bg.jpg') center/cover no-repeat;
+    min-height: 320px;
+    color: var(--c-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+  .hero p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    max-width: 720px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  }
+  .hero button {
+    background: var(--c-red);
+    color: var(--c-white);
+    border: none;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .hero button:hover {
+    background: #b8251a;
+  }
+  /* Sekce */
+  section {
+    background: var(--c-white);
+    max-width: 1080px;
+    margin: 32px auto;
+    padding: 36px 28px;
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(34,36,42,0.07);
+    color: var(--c-dark);
+  }
+  h2 {
+    font-size: 2rem;
+    border-bottom: 3px solid var(--c-red);
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+    font-weight: 700;
+    color: var(--c-dark);
+    text-align: center;
+  }
+  /* Služby & Výhody grid - jemné boxy */
+  .services, .benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 32px;
+    margin-bottom: 0;
+  }
+  .service-box, .benefit-box {
+    background: var(--c-box);
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(34,36,42, 0.06);
+    padding: 24px 18px 16px 18px;
+    width: 100%;
+    max-width: 360px;
+    text-align: left;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--c-grey);
+    box-sizing: border-box;
+  }
+  .service-box h3, .benefit-box h3 {
+    font-size: 1.18rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--c-dark);
+    letter-spacing: .5px;
+  }
+  .service-box p, .benefit-box p {
+    color: #555;
+    font-size: 1.02rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 1.55;
+  }
+  /* Galerie/Reference */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    gap: 24px;
+    justify-items: center;
+  }
+  .gallery-item {
+    background: var(--c-lightbg);
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(34,36,42, 0.13);
+    text-align: center;
+    width: 100%;
+    max-width: 270px;
+    user-select: none;
+    overflow: hidden;
+    cursor: default;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  .gallery-item p {
+    color: var(--c-dark);
+    font-weight: 600;
+    font-size: 1.05rem;
+    margin: 12px 0 14px 0;
+  }
+  /* O firmě + Kontakty */
+  .info-contact-wrapper {
+    display: flex;
+    gap: 32px;
+    max-width: 1080px;
+    margin: 32px auto;
+  }
+  .about, .contact-section {
+    flex: 1;
+    background: var(--c-lightbg);
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(34,36,42, 0.07);
+    padding: 36px 24px;
+    color: var(--c-dark);
+    min-width: 0;
+  }
+  .about p {
+    text-align: center;
+    line-height: 1.5;
+    color: #555;
+  }
+  .contact-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  input, textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    border: 2px solid var(--c-grey);
+    border-radius: 6px;
+    font-family: inherit;
+    resize: vertical;
+  }
+  input:focus, textarea:focus {
+    border-color: var(--c-red);
+    outline: none;
+  }
+  textarea { min-height: 120px; }
+  button[type="submit"] {
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    background: var(--c-red);
+    color: var(--c-white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background: #b8251a;
+  }
+  .contact-info-box {
+    margin-top: 36px;
+    font-weight: 600;
+    color: #555;
+    font-size: 1rem;
+    user-select: none;
+  }
+  .contact-info-box p {
+    margin-bottom: 10px;
+  }
+  .contact-info-box span {
+    font-weight: 700;
+    color: var(--c-red);
+    display: inline-block;
+    width: 120px;
+  }
+  /* Footer */
+  footer {
+    background: var(--c-dark);
+    color: #eee;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 22px 12px;
+    user-select: none;
+    letter-spacing: 0.5px;
+  }
+  /* Responsive úpravy */
+  @media (max-width: 980px) {
+    .info-contact-wrapper {
+      flex-direction: column;
+      gap: 24px;
+      padding: 0 0;
+    }
+  }
+  @media (max-width: 780px) {
+    nav {
+      font-size: 0.85rem;
+      gap: 12px;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    .gallery-item { max-width: none; }
+    .services, .benefits, .gallery {
+      grid-template-columns: 1fr;
+    }
+    .header-inner { flex-wrap: wrap; gap: 12px; padding: 12px 16px;}
+    nav { flex-grow: 1; justify-content: center; }
+    .logo img { height: 70px; }
+  }
+  @media (max-width: 420px) {
+    .hero h1 { font-size: 1.6rem;}
+    form { padding: 0; }
+    .logo img { height: 58px; }
+    section { padding: 22px 7px; }
+    .about, .contact-section { padding: 22px 7px;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner container">
+    <div class="logo">
+      <img src="logo.png" alt="TSIKO STAV logo" />
+    </div>
+    <nav>
+      <a href="#services">Služby</a>
+      <a href="#references">Reference</a>
+      <a href="#about">O firmě</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Kvalita, spolehlivost a preciznost ve stavebnictví</h1>
+  <p>Realizace staveb, rekonstrukcí a modernizací s důrazem na každý detail a maximální spokojenost klientů.</p>
+  <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Nezávazně poptat</button>
+</section>
+
+<main class="container">
+  <section id="services">
+    <h2>Naše služby</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Konstrukce budov</h3>
+        <p>Stavíme moderní rodinné i bytové domy na klíč s důrazem na kvalitu a detail.</p>
+      </div>
+      <div class="service-box">
+        <h3>Rekonstrukce objektů</h3>
+        <p>Provádíme kompletní rekonstrukce a revitalizace budov všech typů.</p>
+      </div>
+      <div class="service-box">
+        <h3>Modernizace fasád a střech</h3>
+        <p>Obnovujeme a zateplujeme fasády, realizujeme nové střechy i opravy.</p>
+      </div>
+      <div class="service-box">
+        <h3>Stavební poradenství</h3>
+        <p>Pomáháme s plánováním staveb a technickým řešením vašich projektů.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <h2>Naše garance a výhody</h2>
+    <div class="benefits">
+      <div class="benefit-box">
+        <h3>Individuální přístup</h3>
+        <p>Každý projekt řešíme osobně a s ohledem na vaše požadavky.</p>
+      </div>
+      <div class="benefit-box">
+        <h3>Záruka kvality</h3>
+        <p>Dodržujeme nejvyšší standardy a ručíme za výsledky naší práce.</p>
+      </div>
+      <div class="benefit-box">
+        <h3>Rychlost a čistota</h3>
+        <p>Stavíme efektivně a udržujeme pořádek po celou dobu spolupráce.</p>
+      </div>
+      <div class="benefit-box">
+        <h3>Dlouholetá zkušenost</h3>
+        <p>V oboru působíme přes 10 let, máme bohaté reference a odborné znalosti.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="references">
+    <h2>Reference</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=80" alt="Rodinný dům, Pardubice 2025" />
+        <p>Rodinný dům, Pardubice 2025</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=600&q=80" alt="Rekonstrukce střechy, Kolín 2025" />
+        <p>Rekonstrukce střechy, Kolín 2025</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1560184897-9074a3e50af0?auto=format&fit=crop&w=600&q=80" alt="Bytový dům, Chrudim 2024" />
+        <p>Bytový dům, Chrudim 2024</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1534777415433-9bffdabd08ab?auto=format&fit=crop&w=600&q=80" alt="Modernizace fasády, Hradec Králové 2023" />
+        <p>Modernizace fasády, Hradec Králové 2023</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1536478111822-5b8413e62b8a?auto=format&fit=crop&w=600&q=80" alt="Památková rekonstrukce, Pardubice 2022" />
+        <p>Památková rekonstrukce, Pardubice 2022</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="info-contact-wrapper">
+    <section id="about" class="about">
+      <h2>O firmě</h2>
+      <p>TSIKO STAV s.r.o. je zkušená stavební firma z Pardubic. Specializujeme se na realizace střech, hrubé stavby a památkové rekonstrukce. Dbáme na kvalitu, spolehlivost a osobní přístup ke každému klientovi.</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Kontaktujte nás</h2>
+      <form>
+        <input type="text" placeholder="Vaše jméno" required />
+        <input type="email" placeholder="Váš e-mail" required />
+        <textarea placeholder="Vaše zpráva" required></textarea>
+        <button type="submit">Odeslat</button>
+      </form>
+      <div class="contact-info-box">
+        <p><span>Adresa:</span> třída Míru 110, 53002 Pardubice</p>
+        <p><span>IČO:</span> 222 67 719</p>
+        <p><span>Telefon:</span> 604 724 950</p>
+        <p><span>E-mail:</span> tsikostav@seznam.cz</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  © 2025 TSIKO STAV s.r.o. | Všechna práva vyhrazena.
+</footer>
+</body>
+</html>
+

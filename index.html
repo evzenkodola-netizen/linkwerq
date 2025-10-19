@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Domů - Linkwerq</title>
+<title>Pro firmy - Linkwerq</title>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,600&display=swap" rel="stylesheet" />
 <style>
 body {
@@ -48,7 +48,7 @@ header > div.logo-container {
   text-decoration: none;
   font-weight: 400;
 }
-.nav a.account {
+.nav a.account, .nav a.active {
   background: #eff;
   color: #1871e6;
   border-radius: 7px;
@@ -259,10 +259,10 @@ h1.title-header .highlight {
     <div class="logo">Linkwerq</div>
   </div>
   <nav class="nav">
-    <a href="pro_firmy.html">Pro firmy</a>
+    <a href="pro_firmy.html" class="account">Pro firmy</a>
     <a href="remeslnici.html">Pro řemeslníky</a>
     <a href="spolupracujeme.html">Spolupracujeme</a>
-    <a href="kontakt.html" class="account">Kontakt</a>
+    <a href="kontakt.html">Kontakt</a>
   </nav>
   <div class="lang-switch">
     <a href="index.html" class="active">Čeština</a>
@@ -273,28 +273,19 @@ h1.title-header .highlight {
   </div>
 </header>
 <div class="main-wrapper">
-  <h1 class="title-header"><span class="highlight">Linkwerq</span> - Kvalitní řemeslníci online</h1>
+  <h1 class="title-header"><span class="highlight">Pro firmy</span> – najděte kvalitní řemeslníky</h1>
   <div class="decorative-line"></div>
   <div class="presentation-text">
-    Pro online kontakt vyberte odpovídající formulář: jste firma hledající řemeslníka, nebo řemeslník hledající práci? Vyplňte formulář a my vám pomůžeme najít vhodné partnery rychle a jednoduše.
+    Rychle a jednoduše najděte spolehlivé řemeslníky pro vaše projekty. Vyplňte níže formulář a my vám pomůžeme připojit ty nejlepší odborníky.
   </div>
   <div class="intro-forms">
     <div class="form-box">
-      <h3>Pro firmy - Hledáte spolehlivé řemeslníky?</h3>
+      <h3>Hledáte kvalitní řemeslníky?</h3>
       <form action="https://formspree.io/f/xpwylgzq" method="POST" class="contact-form">
         <input type="text" name="company_name" placeholder="Název firmy" required />
         <textarea name="job_description" placeholder="Popis zakázky" required></textarea>
         <input type="email" name="_replyto" placeholder="Email pro kontakt" required />
-        <button type="submit">Odeslat</button>
-      </form>
-    </div>
-    <div class="form-box">
-      <h3>Pro řemeslníky - Hledáte práci?</h3>
-      <form action="https://formspree.io/f/xpwylgzq" method="POST" class="contact-form">
-        <input type="text" name="artisan_name" placeholder="Jméno" required />
-        <input type="text" name="specialization" placeholder="Specializace" required />
-        <input type="email" name="_replyto" placeholder="Email pro kontakt" required />
-        <button type="submit">Odeslat</button>
+        <button type="submit">Pošlete svou poptávku</button>
       </form>
     </div>
   </div>
@@ -302,7 +293,7 @@ h1.title-header .highlight {
     <div class="feature-box">
       <img src="images/toolbox.png" alt="Odbornost" />
       <div class="feature-title">Odbornost</div>
-      <div class="feature-desc">Řemeslníci jsou opravdoví profesionálové, kteří rozumí vašim potřebám a poskytnou hodnotnou službu, jenž firmy potřebují.</div>
+      <div class="feature-desc">Řemeslníci jsou opravdoví profesionálové, kteří rozumí vašim potřebám a poskytnou hodnotnou službu, kterou firmy potřebují.</div>
     </div>
     <div class="feature-box">
       <img src="images/globe--v1.png" alt="Zahraničí" />
